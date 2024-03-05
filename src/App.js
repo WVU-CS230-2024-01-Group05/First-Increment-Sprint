@@ -87,12 +87,6 @@ const App = ({ signOut }) => {
             variation="quiet"
             required
           />
-          <View
-          name="image"
-          as="input"
-          type="file"
-          style={{ alignSelf: "end" }}
-        />
           <Button type="submit" variation="primary">
             Search
           </Button>
