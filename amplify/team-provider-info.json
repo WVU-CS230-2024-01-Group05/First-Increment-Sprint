@@ -14,6 +14,9 @@
     "categories": {
       "auth": {
         "webapp52497cf0": {}
+      },
+      "api": {
+        "webapp": {}
       }
     }
   }
