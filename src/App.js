@@ -76,21 +76,13 @@ const App = ({ signOut }) => {
 
   return (
     <View className="App">
-      <Heading level={1}>My Notes App</Heading>
+      <Heading level={1}>Nom Nom Next</Heading>
       <View as="form" margin="3rem 0" onSubmit={createNote}>
         <Flex direction="row" justifyContent="center">
           <TextField
             name="name"
-            placeholder="Note Name"
+            placeholder="Searchbar placeholder"
             label="Note Name"
-            labelHidden
-            variation="quiet"
-            required
-          />
-          <TextField
-            name="description"
-            placeholder="Note Description"
-            label="Note Description"
             labelHidden
             variation="quiet"
             required
@@ -102,11 +94,11 @@ const App = ({ signOut }) => {
           style={{ alignSelf: "end" }}
         />
           <Button type="submit" variation="primary">
-            Create Note
+            Search
           </Button>
         </Flex>
       </View>
-      <Heading level={2}>Current Notes</Heading>
+      <Heading level={2}>"Recipes Placeholder"</Heading>
       <View margin="3rem 0">
         {notes.map((note) => (
           <Flex
