@@ -9,7 +9,7 @@ Amplify.configure(config);
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-const isAuthPage = window.location.pathname.includes('/auth');
+const isAuthPage = window.location.pathname.includes('/webapp');
 document.body.classList.toggle('auth-page', isAuthPage);
 
 root.render(
