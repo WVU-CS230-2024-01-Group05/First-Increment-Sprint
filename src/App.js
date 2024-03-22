@@ -83,8 +83,22 @@ const App = ({ signOut }) => {
   return (
     <View className="App">
       <Heading level={1} color="red">Nom Nom Next</Heading>
-      <SearchBar onSearchChange={setSearchQuery} />
-      <Heading level={2}>Recipes Placeholder</Heading>
+      <View as="form" margin="3rem 0" onSubmit={createNote}>
+        <Flex direction="row" justifyContent="center">
+          <TextField
+            name="name"
+            placeholder="Searchbar placeholder"
+            label="Note Name"
+            labelHidden
+            variation="quiet"
+            required
+          />
+          <Button type="submit" variation="primary">
+            Search
+          </Button>
+        </Flex>
+      </View>
+      <Heading level={2}>"Recipes Placeholder"</Heading>
       <View margin="3rem 0">
         {filteredNotes.map((note) => (
           <Flex
