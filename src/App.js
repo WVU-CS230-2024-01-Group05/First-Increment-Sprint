@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import SearchBar from "./SearchBar";
+import search from "./search";
 import "./App.css";
 import "@aws-amplify/ui-react/styles.css";
 import {
