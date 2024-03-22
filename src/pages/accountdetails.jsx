@@ -5,10 +5,17 @@ const accountdetails =()=>{
     useEffect(()=>{ 
         const fetchDetails=async()=>{
             try{
-
+                
             }catch(err){
                 console.log(err)
             }
         }
     },[]);
 }
+
+return(
+    <div>
+        <h1>Account Details</h1>
+        
+    </div>
+)
