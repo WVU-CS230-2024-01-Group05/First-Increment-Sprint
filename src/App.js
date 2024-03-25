@@ -94,9 +94,9 @@ const App = ({ signOut }) => {
             variation="quiet"
             required
           />
-          <button>
+          <Button>
             <Link to="/pages/search">Search</Link>
-          </button>
+          </Button>
         </Flex>
       </View>
       <Heading level={2}>"Recipes Placeholder"</Heading>
