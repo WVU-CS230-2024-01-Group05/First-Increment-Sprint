@@ -25,11 +25,22 @@ import {
 import { generateClient} from 'aws-amplify/api';
 import { uploadData, getUrl, remove } from 'aws-amplify/storage';
 
+function App(){
+  return(
+    <div className="App">
+      <BrowserRouter>
+      <Routes>
+          <Route path="/" element={<search/>}/>
+      </Routes>
+      </BrowserRouter>
+    </div>
+  );
+}
 const client = generateClient();
 
-const App = ({ signOut }) => {
+/*const App = ({ signOut }) => {
   const [notes, setNotes] = useState([]);
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState("");*/
 
   useEffect(() => {
     fetchNotes();
@@ -85,7 +96,7 @@ const App = ({ signOut }) => {
     note.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  return (
+  /*return (
     <View className="App">
       <Heading level={1} color="red">Nom Nom Next</Heading>
       <View as="form" margin="3rem 0" onSubmit={createNote}>
@@ -132,6 +143,6 @@ const App = ({ signOut }) => {
       <Button onClick={signOut}>Sign Out</Button>
     </View>
   );
-};
+};*/
 
-export default withAuthenticator(App);
+export default App;
