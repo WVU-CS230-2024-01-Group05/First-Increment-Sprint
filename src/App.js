@@ -36,11 +36,11 @@ function App(){
     </div>
   );
 }
-const client = generateClient();
+/*const client = generateClient();
 
-/*const App = ({ signOut }) => {
+const App = ({ signOut }) => {
   const [notes, setNotes] = useState([]);
-  const [searchQuery, setSearchQuery] = useState("");*/
+  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
     fetchNotes();
@@ -96,6 +96,11 @@ const client = generateClient();
     note.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
+  return(
+    <div>
+
+    </div>
+  )
   /*return (
     <View className="App">
       <Heading level={1} color="red">Nom Nom Next</Heading>
