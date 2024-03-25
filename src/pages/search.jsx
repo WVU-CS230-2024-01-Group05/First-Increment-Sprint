@@ -1,10 +1,11 @@
 import React from 'react';
 import { TextField, Flex } from '@aws-amplify/ui-react';
 import { Link } from 'react-router-dom';
+import './App.css'
 
 const Search = ({ onSearchChange }) => {
   return <div>
-    <h1>Nom Nom Next</h1>
+    <header>Nom Nom Next</header>
     <div>
       <button className="post"><Link to={'/Post'}>Post</Link></button>
     </div>
