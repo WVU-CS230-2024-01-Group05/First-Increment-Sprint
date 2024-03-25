@@ -2,7 +2,11 @@ import React from 'react';
 import { TextField, Flex } from '@aws-amplify/ui-react';
 
 const Search = ({ onSearchChange }) => {
-  return (
+  return <div>
+    <h1>Nom Nom Next</h1>
+    <div>
+      <button className="post"><Link to={'/Post'}>Post</Link></button>
+    </div>
     <Flex direction="row" justifyContent="center" margin="3rem 0">
       <TextField
         onChange={e => onSearchChange(e.target.value)}
@@ -12,7 +16,7 @@ const Search = ({ onSearchChange }) => {
         variation="quiet"
       />
     </Flex>
-  );
+    </div>
 };
 
 export default Search;
