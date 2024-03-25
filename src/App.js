@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
 import search from "./pages/search";
-import {Link} from 'react-router-dom';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Link} from 'react-router-dom';
 import "./App.css";
 import "@aws-amplify/ui-react/styles.css";
 import {
