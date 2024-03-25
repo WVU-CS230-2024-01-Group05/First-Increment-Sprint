@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 
 const Search = ({ onSearchChange }) => {
   return <div>
-    <header>Nom Nom Next</header>
+    <h1>Nom Nom Next</h1>
     <div>
-      <button className="post"><Link to={'/post'}>Post</Link></button>
+      <button><Link to='/Post'>Post</Link></button>
     </div>
     <Flex direction="row" justifyContent="center" margin="3rem 0">
       <TextField
