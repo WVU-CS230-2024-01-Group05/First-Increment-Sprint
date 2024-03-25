@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import search from "./pages/search";
+import Search from "./pages/search";
 import {
   BrowserRouter,
   Routes,
@@ -30,7 +30,7 @@ function App(){
     <div className="App">
       <BrowserRouter>
       <Routes>
-          <Route path="/" element={<search/>}/>
+          <Route path="/" element={<Search/>}/>
       </Routes>
       </BrowserRouter>
     </div>

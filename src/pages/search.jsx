@@ -1,7 +1,7 @@
 import React from 'react';
 import { TextField, Flex } from '@aws-amplify/ui-react';
 
-const search = ({ onSearchChange }) => {
+const Search = ({ onSearchChange }) => {
   return (
     <Flex direction="row" justifyContent="center" margin="3rem 0">
       <TextField
@@ -15,4 +15,4 @@ const search = ({ onSearchChange }) => {
   );
 };
 
-export default search;
+export default Search;
