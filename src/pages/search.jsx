@@ -1,5 +1,6 @@
 import React from 'react';
 import { TextField, Flex } from '@aws-amplify/ui-react';
+import { Link } from 'react-router-dom';
 
 const Search = ({ onSearchChange }) => {
   return <div>
