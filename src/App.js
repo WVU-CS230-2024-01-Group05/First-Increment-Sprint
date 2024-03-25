@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import search from "./pages/search";
+import {Link} from 'react-router-dom';
 import "./App.css";
 import "@aws-amplify/ui-react/styles.css";
 import {
@@ -23,6 +25,7 @@ const client = generateClient();
 
 const App = ({ signOut }) => {
   const [notes, setNotes] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
     fetchNotes();
@@ -74,6 +77,10 @@ const App = ({ signOut }) => {
     });
   }
 
+  const filteredNotes = notes.filter(note =>
+    note.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   return (
     <View className="App">
       <Heading level={1} color="red">Nom Nom Next</Heading>
@@ -87,40 +94,39 @@ const App = ({ signOut }) => {
             variation="quiet"
             required
           />
-          <button>
-            <Link to="/search">Search</Link>
-          </button>
+          <Button>
+            <Link to="/pages/search">Search</Link>
+          </Button>
         </Flex>
       </View>
       <Heading level={2}>"Recipes Placeholder"</Heading>
       <View margin="3rem 0">
-        {notes.map((note) => (
+        {filteredNotes.map((note) => (
           <Flex
-          key={note.id || note.name}
-    direction="row"
-    justifyContent="center"
-    alignItems="center"
-  >
-    <Text as="strong" fontWeight={700}>
-      {note.name}
-    </Text>
-    <Text as="span">{note.description}</Text>
-    {note.image && (
-      <Image
-        src={note.image}
-        alt={`visual aid for ${notes.name}`}
-        style={{ width: 400 }}
-      />
-    )}
-    <Button variation="link" onClick={() => deleteNote(note)}>
-      Delete note
-    </Button>
+            key={note.id || note.name}
+            direction="row"
+            justifyContent="center"
+            alignItems="center"
+          >
+            <Text as="strong" fontWeight={700}>
+              {note.name}
+            </Text>
+            <Text as="span">{note.description}</Text>
+            {note.image && (
+              <Image
+                src={note.image}
+                alt={`visual aid for ${note.name}`}
+                style={{ width: 400 }}
+              />
+            )}
+            <Button variation="link" onClick={() => deleteNote(note)}>
+              Delete note
+            </Button>
           </Flex>
         ))}
       </View>
       <Button onClick={signOut}>Sign Out</Button>
     </View>
-    
   );
 };
 
