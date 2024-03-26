@@ -19,7 +19,7 @@ const Search = ({ onSearchChange }) => {
     <Heading>Nom Nom Next</Heading>
     <div>
       <View>
-      <Link to='/post'><button>Post</button></Link>
+      <button><Link to='/post'>Post</Link></button>
       <Button onClick={signOut}>Sign Out</Button>
       </View>
     </div>
