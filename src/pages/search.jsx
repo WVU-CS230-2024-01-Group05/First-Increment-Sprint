@@ -1,5 +1,4 @@
 import React from 'react';
-import { TextField, Flex } from '@aws-amplify/ui-react';
 import { Link } from 'react-router-dom';
 import {
   Button,
@@ -15,7 +14,7 @@ const Search = ({ onSearchChange }) => {
     <Heading>Nom Nom Next</Heading>
     <div>
       <View>
-      <Link to='/post'><button>Post</button></Link>
+      <Link to='/Post'><button>Post</button></Link>
       <Button onClick={signOut}>Sign Out</Button>
       </View>
     </div>

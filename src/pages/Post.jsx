@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Post = () => {
+const NewPost = () => {
     /*function add(){
         var new_chq_no = parseInt($('#total_chq').val())+1;
         var new_input="<input type='text' id='new_"+new_chq_no+"'>";
@@ -34,6 +34,6 @@ const Post = () => {
         </div>
     )
 
-};
+}
 
-export default Post;
+export default NewPost;
