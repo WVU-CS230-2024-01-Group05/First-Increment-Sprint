@@ -14,10 +14,7 @@ const Post = () => {
           $('#total_chq').val(last_chq_no-1);
         }
       };*/
-
-    return (
-    
-        <div>
+/*<div>
             <h1>Create your recipe</h1>
             <input type="text" placeholder="Recipe name" />
             <input type="text" placeholder="Description"/> 
@@ -32,6 +29,15 @@ const Post = () => {
                         </input>
                     </div>
             </div>
+        </div>*/
+    return (
+        <div>
+        <h1>Create your recipe</h1>
+        <input type="text" placeholder="Recipe name" />
+        <input type="text" placeholder="Description"/> 
+        <div>
+            <p>Step-by-step instructions:</p>
+        </div>
         </div>
     )
 }
