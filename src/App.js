@@ -100,12 +100,7 @@ const App = ({ signOut }) => {
     note.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  return(
-    <div>
-
-    </div>
-  )
-  /*return (
+  return (
     <View className="App">
       <Heading level={1} color="red">Nom Nom Next</Heading>
       <View as="form" margin="3rem 0" onSubmit={createNote}>
