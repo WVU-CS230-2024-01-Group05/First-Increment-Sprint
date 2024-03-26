@@ -16,7 +16,7 @@ const Post = () => {
       };*/
 
     return <div className="recipeForm">
-            <h1>Create your recipe</h1>
+            {/* <h1>Create your recipe</h1>
             <input type="text" placeholder="Recipe name" />
             <input type="text" placeholder="Description"/> 
             <div className="appending_div">
@@ -29,7 +29,8 @@ const Post = () => {
                     <input type="hidden" value="1" id="total_chq" />
                 </input>
             </div>
-            </div>
+            </div> */}
+            <p>PLEASE</p>
         </div>
 }
 

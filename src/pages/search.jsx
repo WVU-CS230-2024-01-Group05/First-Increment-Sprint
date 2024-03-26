@@ -15,7 +15,8 @@ const Search = ({ onSearchChange }) => {
   const { signOut } = useAuthenticator();
 
 
-  return <div>
+  return (
+  <div>
     <Heading>Nom Nom Next</Heading>
     <div>
       <View>
@@ -35,6 +36,7 @@ const Search = ({ onSearchChange }) => {
       />
     </Flex>
     </div>
+  )
 }
 
 export default withAuthenticator(Search);
