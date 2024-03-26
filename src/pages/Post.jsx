@@ -1,8 +1,7 @@
 import React from 'react';
-import $ from 'jquery';
 
 const Post = () => {
-    function add(){
+    /*function add(){
         var new_chq_no = parseInt($('#total_chq').val())+1;
         var new_input="<input type='text' id='new_"+new_chq_no+"'>";
         $('#new_chq').append(new_input);
@@ -14,7 +13,7 @@ const Post = () => {
           $('#new_'+last_chq_no).remove();
           $('#total_chq').val(last_chq_no-1);
         }
-      };
+      };*/
 
     return(
         <div className="recipeForm">
