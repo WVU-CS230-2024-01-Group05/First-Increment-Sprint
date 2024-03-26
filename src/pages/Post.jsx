@@ -15,23 +15,25 @@ const Post = () => {
         }
       };*/
 
-    return <div className="recipeForm">
-            {/* <h1>Create your recipe</h1>
+    return (
+    
+        <div className="recipeForm">
+            <h1>Create your recipe</h1>
             <input type="text" placeholder="Recipe name" />
             <input type="text" placeholder="Description"/> 
-            <div className="appending_div">
+            <div>
                 <p>Step-by-step instructions:</p>
-            <div className="recipeInstructions">
-                <input type="text">
-                    <button onClick="add()">Add</button>
-                    <button onClick="remove()">remove</button>
-                    <div id="new_chq"></div>
-                    <input type="hidden" value="1" id="total_chq" />
-                </input>
+                    <div className="recipeInstructions">
+                        <input type="text">
+                            <button onClick="add()">Add</button>
+                            <button onClick="remove()">remove</button>
+                            <div id="new_chq"></div>
+                            <input type="hidden" value="1" id="total_chq" />
+                        </input>
+                    </div>
             </div>
-            </div> */}
-            <p>PLEASE</p>
         </div>
+    )
 }
 
 export default Post;
