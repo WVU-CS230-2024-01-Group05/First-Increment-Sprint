@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import $ from 'jquery';
 
 const Post = () => {
     function add(){
@@ -15,8 +15,6 @@ const Post = () => {
           $('#total_chq').val(last_chq_no-1);
         }
       };
-
-    const location=useLocation();
 
     return(
         <div className="recipeForm">
