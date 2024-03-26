@@ -6,10 +6,15 @@ import {
   Heading,
   TextField,
   View,
+  useAuthenticator,
   withAuthenticator,
 } from "@aws-amplify/ui-react";
 
 const Search = ({ onSearchChange }) => {
+
+  const { signOut } = useAuthenticator();
+
+
   return <div>
     <Heading>Nom Nom Next</Heading>
     <div>
@@ -28,6 +33,6 @@ const Search = ({ onSearchChange }) => {
       />
     </Flex>
     </div>
-};
+}
 
 export default withAuthenticator(Search);
