@@ -17,13 +17,13 @@ const Post = () => {
 
     return (
     
-        <div className="recipeForm">
+        <div>
             <h1>Create your recipe</h1>
             <input type="text" placeholder="Recipe name" />
             <input type="text" placeholder="Description"/> 
             <div>
                 <p>Step-by-step instructions:</p>
-                    <div className="recipeInstructions">
+                    <div>
                         <input type="text">
                             <button onClick="add()">Add</button>
                             <button onClick="remove()">remove</button>
