@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Search from "./pages/search";
-import Accountdetails from "./pages/accountDetails";
+import Accountdetails from "./pages/accountdetails";
 import Post from "./pages/Post";
 import {
   BrowserRouter,
