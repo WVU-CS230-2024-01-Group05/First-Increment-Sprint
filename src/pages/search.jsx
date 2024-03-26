@@ -6,7 +6,7 @@ const Search = ({ onSearchChange }) => {
   return <div>
     <h1>Nom Nom Next</h1>
     <div>
-      <Link to='/Post'><button>Post</button></Link>
+      <Link to='/post'><button>Post</button></Link>
     </div>
     <Flex direction="row" justifyContent="center" margin="3rem 0">
       <TextField

@@ -1,6 +1,6 @@
 import React, {useState, UseEffect, useEffect} from 'react';
 
-const accountdetails =()=>{
+const Accountdetails =()=>{
     const [userDetails, setUserDetails]=useState(null)
     useEffect(()=>{ 
         const fetchDetails=async()=>{
@@ -19,3 +19,5 @@ return(
         
     </div>
 )
+
+export default Accountdetails
