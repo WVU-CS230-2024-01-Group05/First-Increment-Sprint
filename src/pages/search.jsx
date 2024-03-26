@@ -19,7 +19,9 @@ const Search = ({ onSearchChange }) => {
     <Heading>Nom Nom Next</Heading>
     <div>
       <View>
-      <button><Link to='/post'>Post</Link></button>
+      <Button>
+        <Link to='/post'>Post</Link>
+      </Button>
       <Button onClick={signOut}>Sign Out</Button>
       </View>
     </div>

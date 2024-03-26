@@ -15,8 +15,7 @@ const NewPost = () => {
         }
       };*/
 
-    return <h1>Post Page</h1>
-    (
+    return(
         <div className="recipeForm">
             <h1>Create your recipe</h1>
             <input type="text" placeholder="Recipe name" />
