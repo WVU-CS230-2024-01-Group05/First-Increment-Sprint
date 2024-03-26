@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Search from "./pages/search";
 import AccountDetails from "./pages/accountDetails";
-import NewPost from "./pages/Post";
+import Post from "./pages/Post";
 import {
   BrowserRouter,
   Routes,
@@ -33,7 +33,7 @@ function App(){
       <BrowserRouter>
       <Routes>
           <Route path="/" element={<Search/>}/>
-          <Route path="/post" element={<NewPost/>}/>
+          <Route path="/post" element={<Post/>}/>
           <Route path="/account" element={<AccountDetails/>}/>
       </Routes>
       </BrowserRouter>

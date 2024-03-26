@@ -1,6 +1,6 @@
 import React from 'react';
 
-const NewPost = () => {
+const Post = () => {
     /*function add(){
         var new_chq_no = parseInt($('#total_chq').val())+1;
         var new_input="<input type='text' id='new_"+new_chq_no+"'>";
@@ -15,8 +15,7 @@ const NewPost = () => {
         }
       };*/
 
-    return<div>
-        <div className="recipeForm">
+    return <div className="recipeForm">
             <h1>Create your recipe</h1>
             <input type="text" placeholder="Recipe name" />
             <input type="text" placeholder="Description"/> 
@@ -32,7 +31,6 @@ const NewPost = () => {
             </div>
             </div>
         </div>
-        </div>
 }
 
-export default NewPost;
+export default Post;
