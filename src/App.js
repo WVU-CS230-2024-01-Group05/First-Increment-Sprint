@@ -26,7 +26,7 @@ import { uploadData, getUrl, remove } from 'aws-amplify/storage';
 function App() {
   return (
     <div className="App">
-      <Router>
+      <BrowserRouter>
         <div className="App-header">
           <nav>
             <Link to="/" className="link-style"><button className="button-account">Search</button></Link>
@@ -40,7 +40,7 @@ function App() {
           <Route path="/post" element={<Post />} />
           <Route path="/account" element={<AccountDetails />} />
         </Routes>
-      </Router>
+      </BrowserRouter>
     </div>
   );
 }
