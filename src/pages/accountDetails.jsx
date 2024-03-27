@@ -1,8 +1,4 @@
 import React, {useState, UseEffect, useEffect} from 'react';
-import { currentAuthenticatedUser } from 'aws-amplify/auth';
-import { UserAttributeKey } from 'aws-amplify/auth';
-import { Authenticator } from '@aws-amplify/ui-react';
-import { Auth } from 'aws-amplify';
 
 const AccountDetails =()=>{
     const [userAttributes, setUserAttributes]=useState(null)
@@ -22,20 +18,6 @@ const AccountDetails =()=>{
 return(
     <div>
         <h1>Account Details</h1>
-        {userAttributes && (
-        <ul>
-            {userAttributes && (
-            <ul>
-                {userAttributes.map(attribute => (
-                    <li key={attribute.Name}>
-                        <strong>{attribute.Name}: </strong>
-                        {attribute.Value}
-                    </li>
-                ))}
-            </ul>
-        )}
-        </ul>
-      )}
     </div>
 )
 }
