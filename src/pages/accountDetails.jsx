@@ -1,7 +1,7 @@
 import React, {useState, UseEffect, useEffect} from 'react';
 
 const AccountDetails =()=>{
-    const [userAttributes, setUserAttributes]=useState(null)
+    /*const [userAttributes, setUserAttributes]=useState(null)
     useEffect(()=>{ 
         async function fetchDetails() {
             try{
@@ -13,7 +13,7 @@ const AccountDetails =()=>{
             }
         }
         fetchDetails();
-    },[]);
+    },[]);*/
 
 return(
     <div>
