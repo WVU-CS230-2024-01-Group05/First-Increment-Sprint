@@ -1,7 +1,10 @@
 import React, {useState, UseEffect, useEffect} from 'react';
+import { currentAuthenticatedUser } from 'aws-amplify/auth';
+import { UserAttributeKey } from 'aws-amplify/auth';
+import { Authenticator } from '@aws-amplify/ui-react';
 
 const AccountDetails =()=>{
-    const [userDetails, setUserDetails]=useState(null)
+    const [userAttributes, setUserAttributes]=useState(null)
     useEffect(()=>{ 
         async function fetchDetails() {
             try{
