@@ -24,12 +24,16 @@ return(
         <h1>Account Details</h1>
         {userAttributes && (
         <ul>
-          {userAttributes.map(attribute => (
-            <li key={attribute.username}>
-              <strong>{attribute.username}: </strong>
-              {attribute.Value}
-            </li>
-          ))}
+            {userAttributes && (
+            <ul>
+                {userAttributes.map(attribute => (
+                    <li key={attribute.Name}>
+                        <strong>{attribute.Name}: </strong>
+                        {attribute.Value}
+                    </li>
+                ))}
+            </ul>
+        )}
         </ul>
       )}
     </div>
