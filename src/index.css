@@ -6,8 +6,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background-image: url('/images/emojis.png');
-  background-size: cover;
+  /*background-image: url('/images/emojis.png');
+  background-size: cover;*/
 }
 
 code {
