@@ -25,6 +25,9 @@ const Search = ({ onSearchChange }) => {
       </Button>
       <Button onClick={signOut}>Sign Out</Button>
       </View>
+      <Button>
+        <Link to='/account'>Account</Link>
+      </Button>
     </div>
     <Flex direction="row" justifyContent="center" margin="3rem 0">
       <TextField
