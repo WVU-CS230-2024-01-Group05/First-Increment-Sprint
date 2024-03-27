@@ -1,4 +1,4 @@
-import React from 'react';
+//import React from 'react';
 import React, { useState } from "react"
 
 
@@ -57,7 +57,7 @@ const Post = () => {
 
         </div>
        
-    );
-};
+    )
+}
 
 export default Post;
