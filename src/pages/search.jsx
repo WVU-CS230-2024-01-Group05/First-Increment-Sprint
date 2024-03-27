@@ -20,14 +20,16 @@ const Search = ({ onSearchChange }) => {
     <Heading>Nom Nom Next</Heading>
     <div>
       <View>
-      <Button>
-        <Link to='/post'>Post</Link>
-      </Button>
-      <Button onClick={signOut}>Sign Out</Button>
-      </View>
-      <Button>
-        <Link to='/account'>Account</Link>
-      </Button>
+      <div className="App-header">
+          <nav>
+            <Link to="/" className="link-style"><button className="button-account">Search</button></Link>
+            <Link to="/post" className="link-style"><button className="button-post">Post</button></Link>
+            <Link to="/account" className="link-style"><button className="button-signout">Account Details</button></Link>
+            <button className="button-signout" onClick={signOut}>Sign Out</button>
+            <button><Link to='/account'>Account</Link></button>
+          </nav>
+        </div>
+        </View>
     </div>
     <Flex direction="row" justifyContent="center" margin="3rem 0">
       <TextField
