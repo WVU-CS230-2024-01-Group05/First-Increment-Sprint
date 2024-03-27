@@ -1,6 +1,18 @@
 import React from 'react';
+import React, { useState } from "react"
+
 
 const Post = () => {
+
+    const ingredients = [
+        "Flour", "Sugar", "Salt", "Butter", "Eggs", "Milk", "Vanilla extract", "Baking powder",
+        "Baking soda", "Chocolate chips", "Cocoa powder", "Brown sugar", "Yeast", "Oil", "Cream cheese",
+        "Powdered sugar", "Almond flour", "Coconut flour", "Honey", "Maple syrup", "Nuts", "Spices",
+        "Fruit", "Vegetables", "Chicken", "Beef", "Fish", "Pasta", "Rice", "Quinoa", "Beans", "Lentils",
+        "Tomatoes", "Onions", "Garlic", "Herbs", "Oats", "Cereal", "Bread", "Tortillas", "Cheese",
+        "Yogurt", "Sour cream", "Mayonnaise", "Mustard", "Ketchup", "Soy sauce", "Vinegar", "Wine",
+        "Water", "Soda", "Ice cream", "Whipped cream", "Marshmallows"
+    ];
     /*function add(){
         var new_chq_no = parseInt($('#total_chq').val())+1;
         var new_input="<input type='text' id='new_"+new_chq_no+"'>";
@@ -38,8 +50,14 @@ const Post = () => {
         <div>
             <p>Step-by-step instructions:</p>
         </div>
+        <div className="ingredients">
+      <h1>Ingredients</h1>
+      <IngredientDropdown ingredients={ingredients} />
+    </div>
+
         </div>
-    )
-}
+       
+    );
+};
 
 export default Post;
