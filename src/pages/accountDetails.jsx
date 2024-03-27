@@ -2,6 +2,7 @@ import React, {useState, UseEffect, useEffect} from 'react';
 import { currentAuthenticatedUser } from 'aws-amplify/auth';
 import { UserAttributeKey } from 'aws-amplify/auth';
 import { Authenticator } from '@aws-amplify/ui-react';
+import { Auth } from 'aws-amplify';
 
 const AccountDetails =()=>{
     const [userAttributes, setUserAttributes]=useState(null)
