@@ -19,9 +19,6 @@ return(
     <div>
         <h1>Account Details</h1>
         <p><strong>Username:</strong></p>
-        <nav>
-            <Link to="/" className="link-style"><button className="button-account">Home</button></Link>
-        </nav>
     </div>
 )
 }

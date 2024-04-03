@@ -50,10 +50,10 @@ const Post = () => {
         <div>
             <p>Step-by-step instructions:</p>
         </div>
-        <div className="ingredients">
+        {/* <div className="ingredients">
       <h1>Ingredients</h1>
-      <IngredientDropdown ingredients={ingredients} />
-    </div>
+     <IngredientDropdown ingredients={ingredients} /> 
+    </div> */}
 
         </div>
        
