@@ -3,7 +3,10 @@ import React, { useState } from "react"
 import {
     Link} from 'react-router-dom';
 
+    
+
 const Post = () => {
+
 
     const ingredients = [
         "Flour", "Sugar", "Salt", "Butter", "Eggs", "Milk", "Vanilla extract", "Baking powder",
@@ -44,6 +47,8 @@ const Post = () => {
             </div>
         </div>*/
     return (
+       
+          
         <div>
         <h1>Create your recipe</h1>
         <input type="text" placeholder="Recipe name" />
@@ -84,6 +89,10 @@ const Post = () => {
                   <li><label htmlFor="Ingredient 10">Ingredient 10:</label></li>
                     <input type="text" id="ingredient10" name="ingredient10" />
                </ul>
+                </div>
+                <div>
+                    <label htmlFor="directions">Directions:</label>
+                    <textarea id="directions" name="directions" />
                 </div>
                     
                 <button type="submit">Post</button>
