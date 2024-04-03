@@ -33,11 +33,11 @@ return(
                     <input type="password" id="password" name="password" />
                 </div>
                 <div>
-                    <label htmlFor="firstName">Name:</label>
-                    <input type="text" id="Name" name="Name" />
+                    <label htmlFor="fullName">Full Name:</label>
+                    <input type="text" id="fullName" name="fullName" />
                 </div>
                 <div>
-                    <label htmlFor="description">Description:</label>
+                    <label htmlFor="description">Biography:</label>
                     <textarea id="description" name="description" />
                 </div>
                 <button type="submit">Save Changes</button>
