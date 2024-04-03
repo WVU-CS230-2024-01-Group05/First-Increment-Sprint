@@ -21,9 +21,9 @@ const AccountDetails =()=>{
     },[]);*/
 
 return(
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+    <div>
             <h1>Account Details</h1>
-            <form style={{ width: '300px' }}>
+            <form>
                 <div>
                     <label htmlFor="username">Username:</label>
                     <input type="text" id="username" name="username" />
@@ -40,7 +40,7 @@ return(
                     <label htmlFor="description">Description:</label>
                     <textarea id="description" name="description" />
                 </div>
-                <button type="submit" style={{ marginTop: '10px' }}>Save Changes</button>
+                <button type="submit">Save Changes</button>
             </form>
             <Link to="/">Home</Link>
         </div>
