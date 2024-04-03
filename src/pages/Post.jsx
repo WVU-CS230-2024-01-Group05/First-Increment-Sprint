@@ -50,12 +50,41 @@ const Post = () => {
         <div>
             <p>Step-by-step instructions:</p>
         </div>
-        {/* <div className="ingredients">
-      <h1>Ingredients</h1>
-     <IngredientDropdown ingredients={ingredients} /> 
-    </div> */}
-        <button type="submit">Post</button>
-        <Link to="/">Home</Link>
+        <form>
+                <div>
+                    <label htmlFor="Ingredient 1">Ingredient 1:</label>
+                    <input type="text" id="ingredient1" name="ingredient1" />
+        
+                     <label htmlFor="Ingredient 2">Ingredient 12:</label>
+                    <input type="text" id="ingredient2" name="ingredient2" />
+                
+                    <label htmlFor="Ingredient 3">Ingredient 3:</label>
+                    <input type="text" id="ingredient3" name="ingredient3" />
+               
+                    <label htmlFor="Ingredient 4">Ingredient 4:</label>
+                    <input type="text" id="ingredient4" name="ingredient4" />
+
+                    <label htmlFor="Ingredient 5">Ingredient 5:</label>
+                    <input type="text" id="ingredient5" name="ingredient5" />
+                    
+                    <label htmlFor="Ingredient 6">Ingredient 6:</label>
+                    <input type="text" id="ingredient6" name="ingredient6" />
+                    
+                    <label htmlFor="Ingredient 7">Ingredient 7:</label>
+                    <input type="text" id="ingredient7" name="ingredient7" />
+
+                    <label htmlFor="Ingredient 8">Ingredient 8:</label>
+                    <input type="text" id="ingredient8" name="ingredient8" />
+
+                    <label htmlFor="Ingredient 9">Ingredient 9:</label>
+                    <input type="text" id="ingredient9" name="ingredient9" />
+
+                    <label htmlFor="Ingredient 10">Ingredient 10:</label>
+                    <input type="text" id="ingredient10" name="ingredient10" />
+                </div>
+                <button type="submit">Save Changes</button>
+            </form>
+            <Link to="/">Home</Link>
         </div>
        
     )
