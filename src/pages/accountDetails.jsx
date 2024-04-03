@@ -19,7 +19,7 @@ return(
     <div>
         <h1>Account Details</h1>
         <p><strong>Username:</strong></p>
-        <Link to="/">Back to Homepage</Link>
+        <button><Link to='/search'>Home Page</Link></button>
     </div>
 )
 }
