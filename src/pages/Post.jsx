@@ -54,7 +54,7 @@ const Post = () => {
       <h1>Ingredients</h1>
      <IngredientDropdown ingredients={ingredients} /> 
     </div> */}
-
+        <Link to="/">Home</Link>
         </div>
        
     )
