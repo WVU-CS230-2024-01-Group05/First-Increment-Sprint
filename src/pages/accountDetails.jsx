@@ -21,9 +21,9 @@ const AccountDetails =()=>{
     },[]);*/
 
 return(
-    <div>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <h1>Account Details</h1>
-            <form>
+            <form style={{ width: '300px' }}>
                 <div>
                     <label htmlFor="username">Username:</label>
                     <input type="text" id="username" name="username" />
@@ -33,14 +33,14 @@ return(
                     <input type="password" id="password" name="password" />
                 </div>
                 <div>
-                    <label htmlFor="firstName">First Name:</label>
-                    <input type="text" id="firstName" name="firstName" />
+                    <label htmlFor="firstName">Name:</label>
+                    <input type="text" id="Name" name="Name" />
                 </div>
                 <div>
                     <label htmlFor="description">Description:</label>
                     <textarea id="description" name="description" />
                 </div>
-                <button type="submit">Save Changes</button>
+                <button type="submit" style={{ marginTop: '10px' }}>Save Changes</button>
             </form>
             <Link to="/">Home</Link>
         </div>
