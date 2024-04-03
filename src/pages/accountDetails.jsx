@@ -18,6 +18,8 @@ const AccountDetails =()=>{
 return(
     <div>
         <h1>Account Details</h1>
+        <p><strong>Username:</strong></p>
+        <Link to="/">Back to Homepage</Link>
     </div>
 )
 }
