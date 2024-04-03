@@ -42,6 +42,7 @@ return(
                 </div>
                 <button type="submit">Save Changes</button>
             </form>
+            <Link to="/">Home</Link>
         </div>
 )
 }
