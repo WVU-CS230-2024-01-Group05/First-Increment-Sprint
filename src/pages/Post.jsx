@@ -50,7 +50,7 @@ const Post = () => {
        
           
         <div>
-        <h1>Create your recipe</h1>
+        <h1>Create Your Recipe</h1>
         <input type="text" placeholder="Recipe name" />
         <input type="text" placeholder="Description"/> 
         <div>
