@@ -32,11 +32,6 @@ const Search = ({ onSearchChange }) => {
             <option value="Mexican">Asian</option>
             <option value="American">American</option>
           </select>
-          
-          <label>
-            <input type="checkbox" name="includeArchived"></input>
-            Include Archived
-          </label>
         </form>
       </div>
       <View>
