@@ -19,6 +19,12 @@ const Search = ({ onSearchChange }) => {
   <div>
     <Heading>Nom Nom Next</Heading>
     <div>
+      <div class="search-container">
+        <form action="/search" method="get">
+        <input type="text" placeholder="Search..." name="search"></input>
+       <button type="submit">Search</button>
+     </form>
+      </div>
       <View>
       <div className="App-header">
           <nav>
