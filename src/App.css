@@ -39,8 +39,8 @@
   margin: 5px;
   border: none;
   cursor: pointer;
-  top: 0; 
-  right: 0;
+  top: 90; 
+  right: 80;
 }
 
 .button-signout {
@@ -50,8 +50,8 @@
   margin: 5px;
   border: none;
   cursor: pointer;
-  top: 0; 
-  right: 0;
+  top: 80; 
+  right: 80;
 }
 
 .button-account {
@@ -61,8 +61,8 @@
   margin: 5px;
   border: none;
   cursor: pointer;
-  top: 0; 
-  right: 0;
+  top: 70; 
+  right: 80;
 }
 
 .search-container {

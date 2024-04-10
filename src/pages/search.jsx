@@ -29,7 +29,7 @@ const Search = ({ onSearchChange }) => {
             <option value="Gluten-Free">Gluten-Free</option>
             <option value="Dairy-Free">Dairy-Free</option>
             <option value="Japanese">Japanese</option>
-            <option value="Mexican">Asian</option>
+            <option value="Mexican">Mexican</option>
             <option value="American">American</option>
           </select>
         </form>
