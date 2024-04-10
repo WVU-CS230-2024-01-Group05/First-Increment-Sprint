@@ -28,7 +28,6 @@ const Search = ({ onSearchChange }) => {
       <View>
       <div className="App-header">
           <nav>
-            <Link to="/" className="link-style"><button className="button-account">Search</button></Link>
             <Link to="/post" className="link-style"><button className="button-post">Post</button></Link>
             <Link to="/account" className="link-style"><button className="button-signout">Account Details</button></Link>
             <button className="button-signout" onClick={signOut}>Sign Out</button>
