@@ -77,10 +77,14 @@
 
 .search-container form {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
-  max-width: 600px; 
+  padding: 0 10%; 
+  flex-wrap: wrap; 
+}
+
+.search-container form > * {
+  margin: 5px; 
 }
 
 .search-container input[type="text"] {
@@ -99,6 +103,26 @@
   cursor: pointer;
 }
 
+.search-container select, .search-container input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.search-container select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: white;
+  cursor: pointer;
+}
+
+.search-container label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.search-container input[type="checkbox"] {
+  margin-right: 5px; 
+}
 
 @keyframes App-logo-spin {
   from {

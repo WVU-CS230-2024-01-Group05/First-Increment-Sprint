@@ -21,9 +21,23 @@ const Search = ({ onSearchChange }) => {
     <div>
       <div class="search-container">
         <form action="/search" method="get">
-        <input type="text" placeholder="Search..." name="search"></input>
-       <button type="submit">Search</button>
-     </form>
+          <input type="text" placeholder="Search..." name="search"></input>
+          <button type="submit">Search</button>
+          <select name="category">
+            <option value="">All Categories</option>
+            <option value="Vegan">Vegan</option>
+            <option value="Gluten-Free">Gluten-Free</option>
+            <option value="Dairy-Free">Dairy-Free</option>
+            <option value="Japanese">Japanese</option>
+            <option value="Mexican">Asian</option>
+            <option value="American">American</option>
+          </select>
+          
+          <label>
+            <input type="checkbox" name="includeArchived"></input>
+            Include Archived
+          </label>
+        </form>
       </div>
       <View>
       <div className="App-header">
@@ -35,15 +49,6 @@ const Search = ({ onSearchChange }) => {
         </div>
         </View>
     </div>
-    <Flex direction="row" justifyContent="center" margin="3rem 0">
-      <TextField
-        onChange={e => onSearchChange(e.target.value)}
-        placeholder="Search notes"
-        label="Search Notes"
-        labelHidden
-        variation="quiet"
-      />
-    </Flex>
     </div>
   )
 }
