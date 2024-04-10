@@ -39,6 +39,8 @@
   margin: 5px;
   border: none;
   cursor: pointer;
+  top: 0; 
+  right: 0;
 }
 
 .button-signout {
@@ -48,15 +50,8 @@
   margin: 5px;
   border: none;
   cursor: pointer;
-}
-
-.button-container {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 10px; 
+  top: 0; 
+  right: 0;
 }
 
 .button-account {
@@ -66,10 +61,9 @@
   margin: 5px;
   border: none;
   cursor: pointer;
+  top: 0; 
+  right: 0;
 }
-
-
-
 
 @keyframes App-logo-spin {
   from {
