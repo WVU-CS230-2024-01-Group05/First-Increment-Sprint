@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react";
-import {ReactDOM} from "react";
-import {render} from "react-dom";
 import ReactDOM from 'react-dom/client';
 import Search from "./pages/search";
 import AccountDetails from "./pages/accountDetails";
