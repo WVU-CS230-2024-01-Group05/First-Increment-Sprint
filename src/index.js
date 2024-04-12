@@ -6,7 +6,19 @@ import reportWebVitals from './reportWebVitals';
 import { Amplify } from 'aws-amplify';
 import config from './aws-exports';
 Amplify.configure(config);
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 
+const client = new ApolloClient({
+  uri: 'https://your-graphql-api-endpoint', // Your GraphQL endpoint
+  cache: new InMemoryCache()
+});
+
+ReactDOM.render(
+  <ApolloProvider client={client}>
+    <App />
+  </ApolloProvider>,
+  document.getElementById('root')
+);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
