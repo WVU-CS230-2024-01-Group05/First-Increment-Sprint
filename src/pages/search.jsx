@@ -22,7 +22,7 @@ const Search = ({ onSearchChange }) => {
     <div className="search-container">
     <input type="text" placeholder="Search..." name="search"></input>
           <nav>
-          <Link to="/search-results">
+          <Link to="/search-results" className="link-style">
             <button>Search</button>
           </Link>
           </nav>
