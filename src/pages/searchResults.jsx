@@ -24,7 +24,10 @@ const searchResults = () => {
 
 
  return(
-    <div>test</div>
+    <div>
+        <p>Step-by-step instructions:</p>
+    </div>
   )
+
 }
 export default searchResults;
