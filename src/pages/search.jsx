@@ -21,9 +21,11 @@ const Search = ({ onSearchChange }) => {
     <div>
     <div className="search-container">
     <input type="text" placeholder="Search..." name="search"></input>
+          <nav>
           <Link to="/search-results">
             <button>Search</button>
           </Link>
+          </nav>
           <select name="category">
             <option value="">All Categories</option>
             <option value="Vegan">Vegan</option>
