@@ -23,6 +23,19 @@ import {
 } from "@aws-amplify/ui-react";
 import { generateClient} from 'aws-amplify/api';
 import { uploadData, getUrl, remove } from 'aws-amplify/storage';
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+
+const client = new ApolloClient({
+  uri: 'https://your-graphql-api-endpoint', // Your GraphQL endpoint
+  cache: new InMemoryCache()
+});
+
+ReactDOM.render(
+  <ApolloProvider client={client}>
+    <App />
+  </ApolloProvider>,
+  document.getElementById('root')
+);
 
 function App() {
   return (

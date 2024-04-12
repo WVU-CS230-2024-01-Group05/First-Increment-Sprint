@@ -1,37 +1,29 @@
-/* eslint-disable */
-// this is an auto generated file. This will be overwritten
+import { gql, useQuery } from '@apollo/client';
 
-export const getNote = /* GraphQL */ `
-  query GetNote($id: ID!) {
-    getNote(id: $id) {
+const GET_USERS = gql`
+  query {
+    users {
       id
       name
-      description
-      image
-      createdAt
-      updatedAt
-      __typename
+      email
     }
   }
 `;
-export const listNotes = /* GraphQL */ `
-  query ListNotes(
-    $filter: ModelNoteFilterInput
-    $limit: Int
-    $nextToken: String
-  ) {
-    listNotes(filter: $filter, limit: $limit, nextToken: $nextToken) {
-      items {
-        id
-        name
-        description
-        image
-        createdAt
-        updatedAt
-        __typename
-      }
-      nextToken
-      __typename
-    }
-  }
-`;
+
+function Users() {
+  const { loading, error, data } = useQuery(GET_USERS);
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error :(</p>;
+
+  return (
+    <div>
+      {data.users.map(user => (
+        <div key={user.id}>
+          <p>Name: {user.name}</p>
+          <p>Email: {user.email}</p>
+        </div>
+      ))}
+    </div>
+  );
+}
