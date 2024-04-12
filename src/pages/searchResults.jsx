@@ -25,7 +25,7 @@ const searchResults = () => {
  return(
     <div className = "App-header">
         <h1>Search Results</h1>
-        <searchResults recipes={recipesData} />
+        {/* <searchResults recipes={recipesData} /> */}
     </div>
   )
 }
