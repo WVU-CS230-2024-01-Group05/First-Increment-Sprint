@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const searchResults = () => {
 
-const recipesData = [
+/*const recipesData = [
     {
         id: 1,
         name: "Spaghetti Carbonara",
@@ -18,7 +18,7 @@ const recipesData = [
         ingredients: ["Chicken breast", "Fettuccine pasta", "Heavy cream", "Garlic", "Parmesan cheese"],
         directions: "Grill chicken until cooked through. Cook pasta until al dente. In a saucepan..."
     },
-];
+];*/
 
 
 
@@ -26,7 +26,7 @@ const recipesData = [
  return(
     <div className = "App-header">
         <h1>Search Results</h1>
-        {<searchResults recipes={recipesData} /> }
+        {/*<searchResults recipes={recipesData} />*/ }
         <Link to="/">Home</Link>
     </div>
   )
