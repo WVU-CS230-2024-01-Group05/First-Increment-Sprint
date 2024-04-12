@@ -28,10 +28,6 @@ const AccountDetails = () => {
                     <input type="text" id="username" name="username" />
                 </div>
                 <div className="form-group">
-                    <label htmlFor="password">Password:</label>
-                    <input type="password" id="password" name="password" />
-                </div>
-                <div className="form-group">
                     <label htmlFor="fullName">Full Name:</label>
                     <input type="text" id="fullName" name="fullName" />
                 </div>

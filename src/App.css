@@ -254,7 +254,7 @@
   max-width: 600px;
   margin: 40px auto;
   padding: 20px;
-  background-color: #f3f4f6;
+  background-color: #fecb9c;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
@@ -280,7 +280,7 @@
   padding: 8px;
   border: 1px solid #ddd;
   border-radius: 4px;
-  box-sizing: border-box; /* adds padding to width */
+  box-sizing: border-box; 
 }
 
 .save-button {
