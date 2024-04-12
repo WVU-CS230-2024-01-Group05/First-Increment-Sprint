@@ -56,7 +56,7 @@ const Post = () => {
                 <input type="text" id="recipeName" name="recipeName" />
             </div>
             <div>
-                <label htmlFor="description">Description:</label>
+                <label htmlFor="description"> Description:</label>
                 <input type="text" id="description" name="description" />
             </div>
             <div>
@@ -98,10 +98,6 @@ const Post = () => {
                 <div>
                     <label htmlFor="ingredient9">Ingredient 9:</label>
                     <input type="text" id="ingredient9" name="ingredient9" />
-                </div>
-                <div>
-                    <label htmlFor="ingredient10">Ingredient 10:</label>
-                    <input type="text" id="ingredient10" name="ingredient10" />
                 </div>
                 <div>
                     <label htmlFor="directions">Directions:</label>
