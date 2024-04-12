@@ -19,10 +19,11 @@ const Search = ({ onSearchChange }) => {
   <div>
     <Heading>Nom Nom Next</Heading>
     <div>
-      <div class="search-container">
-        <form action="/search" method="get">
-          <input type="text" placeholder="Search..." name="search"></input>
-          <button type="submit">Search</button>
+    <div className="search-container">
+    <input type="text" placeholder="Search..." name="search"></input>
+          <Link to="/search-results">
+            <button>Search</button>
+          </Link>
           <select name="category">
             <option value="">All Categories</option>
             <option value="Vegan">Vegan</option>
@@ -32,7 +33,6 @@ const Search = ({ onSearchChange }) => {
             <option value="Mexican">Mexican</option>
             <option value="American">American</option>
           </select>
-        </form>
       </div>
       <View>
       <div className="App-header">
