@@ -27,6 +27,7 @@ const recipesData = [
     <div className = "App-header">
         <h1>Search Results</h1>
         {<searchResults recipes={recipesData} /> }
+        <Link to="/">Home</Link>
     </div>
   )
 }
