@@ -3,6 +3,7 @@ import Search from "./pages/search";
 import AccountDetails from "./pages/accountDetails";
 import './App.css';
 import Post from "./pages/Post";
+import searchResults from "./pages/searchResults";
 import {
   BrowserRouter,
   Routes,
@@ -31,6 +32,7 @@ function App() {
           <Route path="/" element={<Search />} />
           <Route path="/post" element={<Post />} />
           <Route path="/account" element={<AccountDetails />} />
+          <Route path="/search-results" element={<searchResults />} />
         </Routes>
       </BrowserRouter>
     </div>
