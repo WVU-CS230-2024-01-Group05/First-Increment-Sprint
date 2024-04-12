@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+const searchResults = () => {
+
 const recipesData = [
     {
         id: 1,
@@ -19,13 +21,12 @@ const recipesData = [
 ];
 
 
-const searchResults = () => {
 
 
  return(
     <div className = "App-header">
         <h1>Search Results</h1>
-        {/* <searchResults recipes={recipesData} /> */}
+        {<searchResults recipes={recipesData} /> }
     </div>
   )
 }
