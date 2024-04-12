@@ -48,8 +48,8 @@ const Post = () => {
         </div>*/
     return (
        
-          
-        <div>
+      <div className = "App-header">  
+        <div className = "container">
             <h1>Create Your Recipe</h1>
             <div>
                 <label htmlFor="recipeName">Recipe name:</label>
@@ -75,7 +75,34 @@ const Post = () => {
                     <label htmlFor="ingredient3">Ingredient 3:</label>
                     <input type="text" id="ingredient3" name="ingredient3" />
                 </div>
-                {/* Continue this pattern for the remaining ingredients */}
+                <div>
+                    <label htmlFor="ingredient4">Ingredient 4:</label>
+                    <input type="text" id="ingredient4" name="ingredient4" />
+                </div>
+                <div>
+                    <label htmlFor="ingredient5">Ingredient 5:</label>
+                    <input type="text" id="ingredient5" name="ingredient5" />
+                </div>
+                <div>
+                    <label htmlFor="ingredient6">Ingredient 6:</label>
+                    <input type="text" id="ingredient6" name="ingredient6" />
+                </div>
+                <div>
+                    <label htmlFor="ingredient7">Ingredient 7:</label>
+                    <input type="text" id="ingredient7" name="ingredient7" />
+                </div>
+                <div>
+                    <label htmlFor="ingredient8">Ingredient 8:</label>
+                    <input type="text" id="ingredient8" name="ingredient8" />
+                </div>
+                <div>
+                    <label htmlFor="ingredient9">Ingredient 9:</label>
+                    <input type="text" id="ingredient9" name="ingredient9" />
+                </div>
+                <div>
+                    <label htmlFor="ingredient10">Ingredient 10:</label>
+                    <input type="text" id="ingredient10" name="ingredient10" />
+                </div>
                 <div>
                     <label htmlFor="directions">Directions:</label>
                     <textarea id="directions" name="directions" />
@@ -84,7 +111,7 @@ const Post = () => {
             </form>
             <Link to="/">Home</Link>
         </div>
-       
+       </div>
     )
 }
 
