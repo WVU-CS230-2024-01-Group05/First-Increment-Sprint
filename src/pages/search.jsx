@@ -21,6 +21,7 @@ const Search = ({ onSearchChange }) => {
     <div>
     <div className="search-container">
     <input type="text" placeholder="Search..." name="search"></input>
+    fetch('https://z7pmt81mal.execute-api.us-east-2.amazonaws.com/posts',)
           <nav>
           <Link to="/search-results" className="link-style">
             <button>Search</button>
