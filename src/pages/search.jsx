@@ -21,7 +21,6 @@ const Search = ({ onSearchChange }) => {
     <div>
     <div className="search-container">
     <input type="text" placeholder="Search..." name="search"></input>
-    fetch('https://z7pmt81mal.execute-api.us-east-2.amazonaws.com/posts',)
           <nav>
           <Link to="/search-results" className="link-style">
             <button>Search</button>
@@ -40,6 +39,7 @@ const Search = ({ onSearchChange }) => {
       <View>
       <div className="App-header">
           <nav>
+            <Link to="/Test" className="link-style"><button className="button-post">Test</button></Link>
             <Link to="/post" className="link-style"><button className="button-post">Post</button></Link>
             <Link to="/account" className="link-style"><button className="button-signout">Account Details</button></Link>
             <button className="button-signout" onClick={signOut}>Sign Out</button>
