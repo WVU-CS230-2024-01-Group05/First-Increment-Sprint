@@ -1,11 +1,34 @@
+import React, { useState } from "react";
+import { Link } from 'react-router-dom';
+import './post.css';
+import { addRecipe } from './dynamoDbService'; 
+
 const Post = () => {
-    const [selectedFile, setSelectedFile] = useState(null);
+    const [selectedFiles, setSelectedFiles] = useState([]);
     const [ingredients, setIngredients] = useState(['']);
     const [recipeName, setRecipeName] = useState('');
     const [description, setDescription] = useState('');
 
     const handleFileChange = (event) => {
-        setSelectedFile(event.target.files[0]);
+        setSelectedFiles([...event.target.files]);
+    };
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        const recipe = {
+            recipeId: Date.now().toString(),
+            name: recipeName,
+            description: description,
+            ingredients: ingredients,
+            images: selectedFiles.map(file => file.name), 
+        };
+
+        const result = await addRecipe(recipe);
+        if (result.status === 'success') {
+            alert('Recipe posted successfully!');
+        } else {
+            alert('Failed to post recipe: ' + result.message);
+        }
     };
 
     const handleIngredientChange = (index, event) => {
@@ -22,11 +45,6 @@ const Post = () => {
         const newIngredients = [...ingredients];
         newIngredients.splice(index, 1);
         setIngredients(newIngredients);
-    };
-
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        console.log('Form submitted', { recipeName, description, ingredients, selectedFile });
     };
 
     return (
@@ -46,6 +64,12 @@ const Post = () => {
                         onChange={(e) => setDescription(e.target.value)}
                         placeholder="Recipe Description"
                         className="text-area"
+                    />
+                    <input
+                        type="file"
+                        onChange={handleFileChange}
+                        multiple
+                        className="file-input"
                     />
                     <div className="ingredient-list">
                         <p>Ingredients:</p>
