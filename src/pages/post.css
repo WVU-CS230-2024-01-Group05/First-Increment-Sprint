@@ -33,17 +33,12 @@ textarea {
     box-sizing: border-box;
 }
 
-input[type="file"] {
-    border: none;
-    margin-bottom: 10px;
-}
-
 button[type="button"],
 button[type="submit"] {
     background-color: #007bff;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 8px 16px; 
     margin-right: 10px;
     border-radius: 4px;
     text-transform: uppercase;
@@ -62,6 +57,8 @@ button[type="button"].remove-btn {
     position: absolute;
     right: 10px;
     top: 10px;
+    width: 30px;  
+    height: 30px;
 }
 
 button[type="button"].remove-btn:hover {
@@ -70,6 +67,7 @@ button[type="button"].remove-btn:hover {
 
 .add-btn {
     background-color: #28a745;
+    padding: 8px 16px; 
 }
 
 .add-btn:hover {
@@ -86,6 +84,8 @@ button[type="button"].remove-btn:hover {
     margin-bottom: 12px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     position: relative;
+    display: flex; 
+    align-items: center; 
 }
 
 .ingredient-item input {
@@ -140,19 +140,9 @@ button[type="button"].remove-btn:hover {
         font-size: 16px;
         box-sizing: border-box;
     }
-    
+
     .text-area {
         height: 100px;
-        resize: none; 
+        resize: none;
     }
-
-    .file-input {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 10px;
-        border-radius: 4px;
-        border: 1px solid #ddd;
-    }
-    
-    
 }
