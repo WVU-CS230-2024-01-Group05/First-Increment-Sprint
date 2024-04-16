@@ -1,0 +1,135 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+button {
+    cursor: pointer;
+}
+
+input[type="text"],
+textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+input[type="file"] {
+    border: none;
+    margin-bottom: 10px;
+}
+
+button[type="button"],
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+button[type="button"]:hover,
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+button[type="button"].remove-btn {
+    background-color: #dc3545;
+    margin: 0;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+button[type="button"].remove-btn:hover {
+    background-color: #c82333;
+}
+
+.add-btn {
+    background-color: #28a745;
+}
+
+.add-btn:hover {
+    background-color: #218838;
+}
+
+/* Ingredient List Styles */
+.ingredient-list {
+    position: relative;
+}
+
+.ingredient-item {
+    background-color: #fff;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.ingredient-item input {
+    width: 100%;
+    border: none;
+    margin: 0;
+    border-radius: 6px 0 0 6px;
+}
+
+.ingredient-item .remove-btn {
+    border-radius: 0 6px 6px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    input[type="text"],
+    textarea,
+    button[type="submit"],
+    button[type="button"] {
+        width: 100%;
+    }
+
+    button[type="button"],
+    button[type="submit"] {
+        margin-bottom: 10px;
+    }
+
+    .ingredient-item {
+        flex-direction: column;
+    }
+
+    .ingredient-item input {
+        width: calc(100% - 20px); /* Adjust width for mobile */
+    }
+
+    .ingredient-item .remove-btn {
+        width: auto;
+        position: static;
+        margin-top: -10px;
+    }
+}
