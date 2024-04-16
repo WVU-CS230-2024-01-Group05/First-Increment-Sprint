@@ -132,4 +132,29 @@ button[type="button"].remove-btn:hover {
         position: static;
         margin-top: -10px;
     }
+
+    .text-input, .text-area {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+        font-size: 16px;
+        box-sizing: border-box;
+    }
+    
+    .text-area {
+        height: 100px;
+        resize: none; /* Disable resizing */
+    }
+
+    .file-input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+    }
+    
+    
 }

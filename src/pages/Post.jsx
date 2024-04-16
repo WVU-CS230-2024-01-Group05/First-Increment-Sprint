@@ -1,13 +1,17 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './post.css'; 
+import './post.css';
 
 const Post = () => {
-    const [selectedFile, setSelectedFile] = useState(null);
+    const [selectedFiles, setSelectedFiles] = useState([]);
     const [ingredients, setIngredients] = useState(['']);
+    const [recipeName, setRecipeName] = useState('');
+    const [description, setDescription] = useState('');
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState('');
 
     const handleFileChange = (event) => {
-        setSelectedFile(event.target.files[0]);
+        setSelectedFiles([...event.target.files]);
     };
 
     const handleIngredientChange = (index, event) => {
@@ -21,15 +25,42 @@ const Post = () => {
     };
 
     const removeIngredient = (index) => {
-        const newIngredients = [...ingredients];
-        newIngredients.splice(index, 1);
+        const newIngredients = ingredients.filter((_, idx) => idx !== index);
         setIngredients(newIngredients);
     };
 
-    // Function to handle form submission
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
-        console.log('Form submitted', { ingredients, selectedFile });
+        setLoading(true);
+        const recipeData = {
+            name: recipeName,
+            description: description,
+            ingredients: ingredients,
+            images: selectedFiles.map(file => file.name),
+        };
+
+        try {
+            const response = await fetch('https://z7pmt81mal.execute-api.us-east-2.amazonaws.com/posts', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(recipeData),
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to post recipe');
+            }
+
+            const responseData = await response.json();
+            console.log('Success:', responseData);
+            
+            alert('Recipe posted successfully!');
+        } catch (error) {
+            console.error('Error:', error);
+            setError('Failed to create recipe');
+        }
+        setLoading(false);
     };
 
     return (
@@ -37,28 +68,43 @@ const Post = () => {
             <div className="container">
                 <h1>Create Your Recipe</h1>
                 <form onSubmit={handleSubmit}>
-                    {/* ... other form fields ... */}
-                    <div className="ingredient-list">
-                        <p>Ingredients:</p>
-                        {ingredients.map((ingredient, index) => (
-                            <div className="ingredient-item" key={index}>
-                                <input
-                                    type="text"
-                                    value={ingredient}
-                                    onChange={(event) => handleIngredientChange(index, event)}
-                                    placeholder={`Ingredient ${index + 1}`}
-                                />
-                                <button type="button" onClick={() => removeIngredient(index)} className="remove-btn">
-                                    ✖
-                                </button>
-                            </div>
-                        ))}
-                        <button type="button" onClick={addIngredient} className="add-btn">
-                            Add Ingredient
-                        </button>
-                    </div>
-                    {/* ... other form fields ... */}
-                    <button type="submit" className="submit-btn">Post</button>
+                    <input
+                        type="text"
+                        value={recipeName}
+                        onChange={(e) => setRecipeName(e.target.value)}
+                        placeholder="Recipe Name"
+                        className="text-input"
+                    />
+                    <textarea
+                        value={description}
+                        onChange={(e) => setDescription(e.target.value)}
+                        placeholder="Recipe Description"
+                        className="text-area"
+                    />
+                    {ingredients.map((ingredient, index) => (
+                        <div key={index} className="ingredient-item">
+                            <input
+                                type="text"
+                                value={ingredient}
+                                onChange={(e) => handleIngredientChange(index, e)}
+                                placeholder="Ingredient"
+                            />
+                            {ingredients.length > 1 && (
+                                <button type="button" onClick={() => removeIngredient(index)} className="remove-btn">Remove</button>
+                            )}
+                        </div>
+                    ))}
+                    <button type="button" onClick={addIngredient} className="add-btn">Add Ingredient</button>
+                    <input
+                        type="file"
+                        onChange={handleFileChange}
+                        multiple
+                        className="file-input"
+                    />
+                    <button type="submit" disabled={loading} className="submit-btn">
+                        {loading ? 'Posting...' : 'Post'}
+                    </button>
+                    {error && <p className="error">{error}</p>}
                 </form>
                 <Link to="/">Home</Link>
             </div>
