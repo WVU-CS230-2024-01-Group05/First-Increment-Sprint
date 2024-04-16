@@ -3,16 +3,11 @@ import { Link } from 'react-router-dom';
 import './post.css';
 
 const Post = () => {
-    const [selectedFiles, setSelectedFiles] = useState([]);
     const [ingredients, setIngredients] = useState(['']);
     const [recipeName, setRecipeName] = useState('');
     const [description, setDescription] = useState('');
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
-
-    const handleFileChange = (event) => {
-        setSelectedFiles([...event.target.files]);
-    };
 
     const handleIngredientChange = (index, event) => {
         const newIngredients = [...ingredients];
@@ -36,7 +31,6 @@ const Post = () => {
             name: recipeName,
             description: description,
             ingredients: ingredients,
-            images: selectedFiles.map(file => file.name),
         };
 
         try {
@@ -54,7 +48,6 @@ const Post = () => {
 
             const responseData = await response.json();
             console.log('Success:', responseData);
-            
             alert('Recipe posted successfully!');
         } catch (error) {
             console.error('Error:', error);
@@ -95,12 +88,6 @@ const Post = () => {
                         </div>
                     ))}
                     <button type="button" onClick={addIngredient} className="add-btn">Add Ingredient</button>
-                    <input
-                        type="file"
-                        onChange={handleFileChange}
-                        multiple
-                        className="file-input"
-                    />
                     <button type="submit" disabled={loading} className="submit-btn">
                         {loading ? 'Posting...' : 'Post'}
                     </button>
