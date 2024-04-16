@@ -15,20 +15,35 @@ const Post = () => {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        const recipe = {
-            recipeId: Date.now().toString(),
+        const recipeData = {
             name: recipeName,
             description: description,
             ingredients: ingredients,
-            images: selectedFiles.map(file => file.name), 
+            images: selectedFiles.map(file => file.name),
         };
 
-        const result = await addRecipe(recipe);
-        if (result.status === 'success') {
-            alert('Recipe posted successfully!');
-        } else {
-            alert('Failed to post recipe: ' + result.message);
+        setLoading(true);
+        try {
+            const response = await fetch('https://z7pmt81mal.execute-api.us-east-2.amazonaws.com', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(recipeData),
+            });
+
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+
+            const responseData = await response.json();
+            console.log('Success:', responseData);
+            // Optionally reset form or redirect the user
+        } catch (error) {
+            console.error('Error:', error);
+            setError('Failed to create recipe');
         }
+        setLoading(false);
     };
 
     const handleIngredientChange = (index, event) => {
