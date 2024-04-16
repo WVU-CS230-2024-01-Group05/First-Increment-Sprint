@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const filter = () => {
+const Filter = () => {
     
     return (
         <div className="filter">
@@ -11,4 +11,4 @@ const filter = () => {
     );
 }
 
-export default filter;
+export default Filter;
