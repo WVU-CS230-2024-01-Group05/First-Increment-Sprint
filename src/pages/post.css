@@ -95,9 +95,6 @@ button[type="button"].remove-btn:hover {
     border-radius: 2px 0 0 2px;
 }
 
-.ingredient-item .remove-btn {
-    border-radius: 0 2px 2px 0;
-}
 
 @media (max-width: 768px) {
     .container {
@@ -123,12 +120,6 @@ button[type="button"].remove-btn:hover {
 
     .ingredient-item input {
         width: calc(100% - 20px);
-    }
-
-    .ingredient-item .remove-btn {
-        width: auto;
-        position: static;
-        margin-top: -10px;
     }
 
     .text-input, .text-area {
