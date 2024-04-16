@@ -83,7 +83,7 @@ const Post = () => {
                                 placeholder="Ingredient"
                             />
                             {ingredients.length > 1 && (
-                                <button type="button" onClick={() => removeIngredient(index)} className="remove-btn">Remove</button>
+                                <button type="button" onClick={() => removeIngredient(index)} className="remove-btn"></button>
                             )}
                         </div>
                     ))}
