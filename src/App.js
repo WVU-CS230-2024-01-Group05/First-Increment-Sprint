@@ -3,7 +3,8 @@ import Search from "./pages/search";
 import AccountDetails from "./pages/accountDetails";
 import './App.css';
 import Post from "./pages/Post";
-import Posts from "./pages/Test"
+import Posts from "./pages/Test";
+import filter from "./pages/filter";
 import searchResults from "./pages/searchResults";
 import {
   BrowserRouter,
