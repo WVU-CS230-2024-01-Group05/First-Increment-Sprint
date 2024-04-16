@@ -22,10 +22,11 @@ function Posts() {
             <h1>Posts from DynamoDB</h1>
             <ul>
                 {posts.map(post => (
-                    <li key={post.id}>
-                        <h3>{post.title}</h3>
-                        <p>ID: {post.id}</p>
-                        <p>Description: {post.description}</p>
+                    <li key={post.PostID}>
+                        <h3>{post.Title}</h3>
+                        <p>ID: {post.PostID}</p>
+                        <p>Description: {post.Description}</p>
+                        <p>Likes: {post.Likes}</p>
                         <hr />
                     </li>
                 ))}
