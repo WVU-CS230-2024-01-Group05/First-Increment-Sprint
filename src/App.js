@@ -31,6 +31,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Search />} />
+          <Route path="/filter" element={<Filter />} />
           <Route path="/post" element={<Post />} />
           <Route path="/account" element={<AccountDetails />} />
           <Route path="/Test" element={<Posts />} />
