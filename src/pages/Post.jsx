@@ -1,78 +1,64 @@
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
+import './post.css'; 
 
 const Post = () => {
     const [selectedFile, setSelectedFile] = useState(null);
-    const [ingredients, setIngredients] = useState([{ id: 1, value: '' }]);
+    const [ingredients, setIngredients] = useState(['']);
 
     const handleFileChange = (event) => {
         setSelectedFile(event.target.files[0]);
     };
 
-    const handleIngredientChange = (id, value) => {
-        const newIngredients = ingredients.map(ingredient => {
-            if (ingredient.id === id) {
-                return { ...ingredient, value: value };
-            }
-            return ingredient;
-        });
+    const handleIngredientChange = (index, event) => {
+        const newIngredients = [...ingredients];
+        newIngredients[index] = event.target.value;
         setIngredients(newIngredients);
     };
 
     const addIngredient = () => {
-        const newIngredient = {
-            id: ingredients.length + 1,
-            value: ''
-        };
-        setIngredients([...ingredients, newIngredient]);
+        setIngredients([...ingredients, '']);
     };
 
-    const removeIngredient = (id) => {
-        setIngredients(ingredients.filter(ingredient => ingredient.id !== id));
+    const removeIngredient = (index) => {
+        const newIngredients = [...ingredients];
+        newIngredients.splice(index, 1);
+        setIngredients(newIngredients);
+    };
+
+    // Function to handle form submission
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        console.log('Form submitted', { ingredients, selectedFile });
     };
 
     return (
         <div className="App-header">
             <div className="container">
                 <h1>Create Your Recipe</h1>
-                <form>
-                    <div>
-                        <label htmlFor="recipeName">Recipe name:</label>
-                        <input type="text" id="recipeName" name="recipeName" />
-                    </div>
-                    <div>
-                        <label htmlFor="description">Description:</label>
-                        <input type="text" id="description" name="description" />
-                    </div>
-                    <div>
+                <form onSubmit={handleSubmit}>
+                    {/* ... other form fields ... */}
+                    <div className="ingredient-list">
                         <p>Ingredients:</p>
                         {ingredients.map((ingredient, index) => (
-                            <div key={ingredient.id}>
-                                <label htmlFor={`ingredient-${ingredient.id}`}>Ingredient {index + 1}:</label>
+                            <div className="ingredient-item" key={index}>
                                 <input
                                     type="text"
-                                    id={`ingredient-${ingredient.id}`}
-                                    value={ingredient.value}
-                                    onChange={(e) => handleIngredientChange(ingredient.id, e.target.value)}
+                                    value={ingredient}
+                                    onChange={(event) => handleIngredientChange(index, event)}
+                                    placeholder={`Ingredient ${index + 1}`}
                                 />
-                                {ingredients.length > 1 && (
-                                    <button type="button" onClick={() => removeIngredient(ingredient.id)}>
-                                        Remove
-                                    </button>
-                                )}
+                                <button type="button" onClick={() => removeIngredient(index)} className="remove-btn">
+                                    ✖
+                                </button>
                             </div>
                         ))}
-                        <button type="button" onClick={addIngredient}>Add Ingredient</button>
+                        <button type="button" onClick={addIngredient} className="add-btn">
+                            Add Ingredient
+                        </button>
                     </div>
-                    <div>
-                        <label htmlFor="photoVideo">Upload a photo or video:</label>
-                        <input type="file" id="photoVideo" name="photoVideo" accept="image/*, video/*" onChange={handleFileChange} />
-                    </div>
-                    <div>
-                        <label htmlFor="directions">Directions:</label>
-                        <textarea id="directions" name="directions" />
-                    </div>
-                    <button type="submit">Post</button>
+                    {/* ... other form fields ... */}
+                    <button type="submit" className="submit-btn">Post</button>
                 </form>
                 <Link to="/">Home</Link>
             </div>
