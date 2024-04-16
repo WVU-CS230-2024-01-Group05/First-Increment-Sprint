@@ -3,7 +3,7 @@ import Search from "./pages/search";
 import AccountDetails from "./pages/accountDetails";
 import './App.css';
 import Post from "./pages/Post";
-import Posts from "./Lambda-Functions";
+import Posts from "./pages/Test";
 import Filter from "./pages/filter";
 import Results from "./pages/Results";
 import {
