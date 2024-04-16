@@ -11,7 +11,6 @@ function Posts() {
         try {
             const response = await fetch('https://z7pmt81mal.execute-api.us-east-2.amazonaws.com/posts');
             const data = await response.json();
-            console.log(data);
             setPosts(data);
         } catch (error) {
             console.error('Error fetching data:', error);
