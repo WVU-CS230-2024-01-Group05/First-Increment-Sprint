@@ -1,6 +1,33 @@
 import React, { useEffect, useState } from 'react';
+
 const AWS = require('aws-sdk');
 const dynamodb = new AWS.DynamoDB.DocumentClient();
+/*exports.handler = async (event) => {
+    const body = JSON.parse(event.body);
+    const params = {
+        TableName: 'Posts',
+        Item: {
+            postId: body.postId, 
+            title: body.title,
+            content: body.content,
+            author: body.author,
+            createdAt: new Date().toISOString(),
+        },
+    };
+
+    try {
+        await dynamodb.put(params).promise();
+        return {
+            statusCode: 201,
+            body: JSON.stringify({ message: 'Post created successfully', postId: body.postId }),
+        };
+    } catch (error) {
+        return {
+            statusCode: 500,
+            body: JSON.stringify({ error: 'Could not create post' }),
+        };
+    }
+};*/
 
 exports.handler = async (event) => {
     try {
@@ -58,31 +85,3 @@ function Posts() {
 }
 
 export default Posts;
-
-exports.handler = async (event) => {
-    const body = JSON.parse(event.body);
-    const params = {
-        TableName: 'Posts',
-        Item: {
-            postId: body.postId, 
-            title: body.title,
-            content: body.content,
-            author: body.author,
-            createdAt: new Date().toISOString(),
-        },
-    };
-
-    try {
-        await dynamoDb.put(params).promise();
-        return {
-            statusCode: 201,
-            body: JSON.stringify({ message: 'Post created successfully', postId: body.postId }),
-        };
-    } catch (error) {
-        return {
-            statusCode: 500,
-            body: JSON.stringify({ error: 'Could not create post' }),
-        };
-    }
-};
-
