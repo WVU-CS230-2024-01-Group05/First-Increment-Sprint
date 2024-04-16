@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 import './post.css';
-import { addRecipe } from './dynamoDbService'; 
+
 
 const Post = () => {
     const [selectedFiles, setSelectedFiles] = useState([]);
