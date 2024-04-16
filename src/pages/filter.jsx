@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import testRecipes from "./pages/recipes";
+import testRecipes from "./pages/testRecipes";
 
 const Filter = () => {
     const [searchInput, setSearchInput] = useState('');
@@ -19,7 +19,7 @@ const Filter = () => {
       );
       setIngredients(newList);
     };
-    
+
   
     const handleSearch = () => {
       const filtered = recipes.filter((recipe) =>
