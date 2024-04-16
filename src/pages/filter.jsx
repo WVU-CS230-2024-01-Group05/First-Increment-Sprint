@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import testRecipes from "./pages/testRecipes";
+import testRecipes from "./pages/testRecipes.js";
 
 const Filter = () => {
     const [searchInput, setSearchInput] = useState('');
