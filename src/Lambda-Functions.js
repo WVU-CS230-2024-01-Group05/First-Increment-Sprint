@@ -49,7 +49,7 @@ exports.handler = async (event) => {
     }
 };
 
-function Posts() {
+/*function Posts() {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
@@ -84,4 +84,4 @@ function Posts() {
     );
 }
 
-export default Posts;
+export default Posts;*/

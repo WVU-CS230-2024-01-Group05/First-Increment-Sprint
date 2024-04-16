@@ -1,11 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import posts from "../Lambda-Functions";
 
 const Results = () => {
 
  return(
-    posts
+    <div><p>Hello World</p></div>
   )
 
 }
