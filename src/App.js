@@ -4,7 +4,7 @@ import AccountDetails from "./pages/accountDetails";
 import './App.css';
 import Post from "./pages/Post";
 import Posts from "./pages/Test";
-import filter from "./pages/filter";
+import Filter from "./pages/filter"; 
 import searchResults from "./pages/searchResults";
 import {
   BrowserRouter,
