@@ -25,7 +25,7 @@ function Posts() {
                     <li key={post.id}>
                         <h3>{post.title}</h3>
                         <p>ID: {post.id}</p>
-                        <p>Description: {post.Description}</p>
+                        <p>Description: {post.description}</p>
                         <hr />
                     </li>
                 ))}
