@@ -6,6 +6,11 @@ import {
     
 
 const Post = () => {
+    const [selectedFile, setSelectedFile] = useState(null);
+
+    const handleFileChange = (event) => {
+        setSelectedFile(event.target.files[0]);
+    };
 
 
     const ingredients = [
@@ -98,6 +103,10 @@ const Post = () => {
                 <div>
                     <label htmlFor="ingredient9">Ingredient 9:</label>
                     <input type="text" id="ingredient9" name="ingredient9" />
+                </div>
+                <div>
+                        <label htmlFor="photoVideo">Upload a photo or video:</label>
+                        <input type="file" id="photoVideo" name="photoVideo" accept="image/*, video/*" onChange={handleFileChange} />
                 </div>
                 <div>
                     <label htmlFor="directions">Directions:</label>
