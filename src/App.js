@@ -3,15 +3,9 @@ import Search from "./pages/search";
 import AccountDetails from "./pages/accountDetails";
 import './App.css';
 import Post from "./pages/Post";
-<<<<<<< HEAD
 import Posts from "./Lambda-Functions";
 import Filter from "./pages/filter";
 import Results from "./pages/Results";
-=======
-import Posts from "./pages/Test";
-import Filter from "./pages/filter"; 
-import searchResults from "./pages/searchResults";
->>>>>>> 1aeed9b2b73e42e4fa5014a6a8f8fc3684619a3b
 import {
   BrowserRouter,
   Routes,

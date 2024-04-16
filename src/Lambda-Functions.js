@@ -22,7 +22,6 @@ exports.handler = async (event) => {
     }
 };
 
-<<<<<<< HEAD
 function Posts() {
     const [posts, setPosts] = useState([]);
 
@@ -59,7 +58,6 @@ function Posts() {
 }
 
 export default Posts;
-=======
 
 exports.handler = async (event) => {
     const body = JSON.parse(event.body);
@@ -88,4 +86,3 @@ exports.handler = async (event) => {
     }
 };
 
->>>>>>> 1aeed9b2b73e42e4fa5014a6a8f8fc3684619a3b
