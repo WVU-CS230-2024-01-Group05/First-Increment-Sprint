@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Posts() {
     const [posts, setPosts] = useState([]);
@@ -32,6 +33,7 @@ function Posts() {
                     </li>
                 ))}
             </ul>
+            <Link to="/">Home</Link>
         </div>
         
     );
