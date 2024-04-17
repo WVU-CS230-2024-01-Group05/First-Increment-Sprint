@@ -32,6 +32,7 @@ const Post = () => {
             name: recipeName,
             description: description,
             ingredients: ingredients,
+            directions: directions,
         };
 
         try {

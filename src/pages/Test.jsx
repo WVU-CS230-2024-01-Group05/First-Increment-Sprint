@@ -32,7 +32,9 @@ function Posts() {
                     </li>
                 ))}
             </ul>
+            <Link to="/">Home</Link>
         </div>
+        
     );
 }
 

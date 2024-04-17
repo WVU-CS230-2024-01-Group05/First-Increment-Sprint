@@ -39,7 +39,7 @@ const Search = ({ onSearchChange }) => {
       <View>
       <div className="App-header">
           <nav>
-            <Link to="/Test" className="link-style"><button className="button-post">Test</button></Link>
+            <Link to="/Test" className="link-style"><button className="button-post">Recipes</button></Link>
             <Link to="/Filter" className="link-style"><button className="button-post">Filter</button></Link>
             <Link to="/post" className="link-style"><button className="button-post">Post</button></Link>
             <Link to="/account" className="link-style"><button className="button-signout">Account Details</button></Link>
