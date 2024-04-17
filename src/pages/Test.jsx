@@ -24,8 +24,8 @@ function Posts() {
                 {posts.map(post => (
                     <li key={post.PostID}>
                         <h3>{post.Title}</h3>
-                        <p>ID: {post.PostID}</p>
                         <p>Description: {post.Description}</p>
+                        <p>Ingredients: {post.Ingredients}</p>
                         <p>Likes: {post.Likes}</p>
                         <hr />
                     </li>
