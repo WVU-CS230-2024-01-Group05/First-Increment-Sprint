@@ -26,6 +26,7 @@ function Posts() {
                         <h3>{post.Title}</h3>
                         <p>Description: {post.Description}</p>
                         <p>Ingredients: {post.Ingredients}</p>
+                        <p>Directions: {post.Directions}</p>
                         <p>Likes: {post.Likes}</p>
                         <hr />
                     </li>
