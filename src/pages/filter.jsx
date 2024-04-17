@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import testRecipes from "./testRecipes.js";
+import { Link } from 'react-router-dom';
 
 const Filter = () => {
     const [searchInput, setSearchInput] = useState('');
@@ -58,6 +59,7 @@ const Filter = () => {
             </li>
           ))}
         </ul>
+        <Link to="/">Home</Link>
       </div>
     );
   };
