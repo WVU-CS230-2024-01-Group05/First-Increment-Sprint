@@ -6,6 +6,7 @@ const Post = () => {
     const [ingredients, setIngredients] = useState(['']);
     const [recipeName, setRecipeName] = useState('');
     const [description, setDescription] = useState('');
+    const [directions, setDirections] = useState('');
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
 
@@ -72,6 +73,12 @@ const Post = () => {
                         value={description}
                         onChange={(e) => setDescription(e.target.value)}
                         placeholder="Recipe Description"
+                        className="text-area"
+                    />
+                    <textarea
+                        value={directions}
+                        onChange={(e) => setDirections(e.target.value)}
+                        placeholder="Recipe Directions"
                         className="text-area"
                     />
                     {ingredients.map((ingredient, index) => (
