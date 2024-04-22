@@ -6,12 +6,6 @@
   height: 40vmin;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #fecb9c;
   min-height: 100vh;
@@ -31,16 +25,6 @@
   text-decoration: none;
 }
 
-.search-container {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: #f8f9fa;
-  padding: 10px 0;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  z-index: 1000;
-}
-
 .search-container form {
   display: flex;
   justify-content: center;
@@ -48,18 +32,26 @@
   padding: 0 10%;
 }
 
+.search-container input[type="text"],
+.search-container button,
+
+
 .search-container input[type="text"] {
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ddd;
-  flex-grow: 1;
+  flex-grow: 1; 
 }
 
 .search-container button {
-  padding: 10px 20px;
   background-color: green;
   color: white;
   border: none;
+  cursor: pointer;
+}
+
+.search-container select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  background-color: white;
   cursor: pointer;
 }
 
@@ -144,13 +136,4 @@
 
 .home-link:hover {
   text-decoration: underline;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
