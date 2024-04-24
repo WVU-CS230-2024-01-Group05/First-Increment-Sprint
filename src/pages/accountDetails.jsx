@@ -1,7 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+AWS.config.region = 'us-east-2'; // Replace 'your-region' with your AWS region
+AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+    IdentityPoolId: "us-east-2:d1beec32-22aa-4786-8510-0c2dc4d116a7" // Replace 'your-identity-pool-id' with your Cognito identity pool ID
+});
+
 
 const AccountDetails = () => {
+    Amplify.configure({
+        Auth: {
+            identityPoolId: 'us-east-2:d1beec32-22aa-4786-8510-0c2dc4d116a7', // Replace 'your-identity-pool-id' with your Cognito identity pool ID
+            region: 'us-east-2', // Replace 'your-region' with your AWS region
+            userPoolId: 'us-east-2_YwPQShSTu', // Replace 'your-user-pool-id' with your Cognito user pool ID
+            }
+    });
+
+    // Render account details component
+    Amplify.UI.AccountDetails({
+        container: document.getElementById('account-details')
+    });
     // Uncomment and use the following code if you want to fetch user details
     /*
     const [userAttributes, setUserAttributes] = useState(null);
