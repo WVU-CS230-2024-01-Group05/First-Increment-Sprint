@@ -18,7 +18,6 @@ function Posts() {
         }
     }
 
-    
     return (
         <div>
             <h1>Posts from DynamoDB</h1>
