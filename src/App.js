@@ -6,6 +6,7 @@ import Post from "./pages/Post";
 import Posts from "./pages/Test";
 import Filter from "./pages/filter";
 import Results from "./pages/Results";
+import TestPost from "./pages/TestPost";
 import {
   BrowserRouter,
   Routes,
@@ -37,6 +38,7 @@ function App() {
           <Route path="/Test" element={<Posts />} />
           <Route path="/search-results" element={<Results />} />
           <Route path="/Filter" element={<Filter />} />
+          <Route path="/TestPost" element={<TestPost/>} />
         </Routes>
       </BrowserRouter>
     </div>
