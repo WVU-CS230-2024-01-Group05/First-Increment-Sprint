@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Auth } from '@aws-amplify/auth';
+import { Auth } from '@aws-amplify';
 
 const AccountDetails = () => {
     const [userAttributes, setUserAttributes] = useState(null);
