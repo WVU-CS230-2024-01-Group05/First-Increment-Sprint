@@ -1,4 +1,4 @@
-import {Auth} from "../node_modules/@aws-amplify"
+import {Auth} from "@aws-amplify/auth"
 
     export const fetchUserAttributes = async () => {
         try {
