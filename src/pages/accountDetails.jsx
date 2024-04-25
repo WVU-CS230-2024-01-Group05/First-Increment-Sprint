@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { fetchUserAttributes } from './AuthUtils';
+import { fetchUserAttributes } from './Account-Details';
 
 const AccountDetails = () => {
     const [userAttributes, setUserAttributes] = useState(null);
