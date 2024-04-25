@@ -1,21 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { Auth } from '../@aws-amplify';
+import { fetchUserAttributes } from './AuthUtils';
 
 const AccountDetails = () => {
     const [userAttributes, setUserAttributes] = useState(null);
 
     useEffect(() => {
-        fetchUserAttributes();
-    }, []);
+        const getUserAttributes = async () => {
+            const attributes = await fetchUserAttributes();
+            setUserAttributes(attributes);
+        };
 
-    const fetchUserAttributes = async () => {
-        try {
-            const currentUser = await Auth.currentAuthenticatedUser();
-            setUserAttributes(currentUser.attributes);
-        } catch (error) {
-            console.error('Error fetching user attributes:', error);
-        }
-    };
+        getUserAttributes();
+    }, []);
 
     return (
         <div className="account-details">
@@ -34,23 +30,6 @@ const AccountDetails = () => {
             )}
         </div>
     );
-}
+};
 
 export default AccountDetails;
-
-// Uncomment and use the following code if you want to fetch user details
-/*
-const [userAttributes, setUserAttributes] = useState(null);
-useEffect(() => {
-    async function fetchDetails() {
-        try {
-            const user = await Auth.currentAuthenticatedUser();
-            const attributes = await Auth.userAttributes(user);
-            setUserAttributes(attributes);
-        } catch (err) {
-            console.log(err);
-        }
-    }
-    fetchDetails();
-}, []);
-*/
