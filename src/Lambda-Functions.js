@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import './media.css';
+
 
 const AWS = require('aws-sdk');
 const dynamodb = new AWS.DynamoDB.DocumentClient();
