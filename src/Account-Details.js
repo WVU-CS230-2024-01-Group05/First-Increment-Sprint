@@ -2,7 +2,7 @@ import {useAuthenticator,AccountSettings, Authenticator} from "@aws-amplify/ui-r
 
     export const fetchUserAttributes = async () => {
         try {
-            const {currentUser} = useAuthenticator((context)=>[context.user]);
+            const {currentUser} = useAuthenticator();
             return currentUser.attributes;
         } catch (error) {
             console.error('Error fetching user attributes:', error);
