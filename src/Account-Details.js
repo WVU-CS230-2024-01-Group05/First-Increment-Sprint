@@ -1,4 +1,4 @@
-import {useAuthenticator,AccountSettings} from "@aws-amplify/ui-react"
+import {useAuthenticator,AccountSettings, Authenticator} from "@aws-amplify/ui-react"
 
     export const fetchUserAttributes = async () => {
         try {
@@ -9,4 +9,5 @@ import {useAuthenticator,AccountSettings} from "@aws-amplify/ui-react"
             return null;
         }
     };
+
 export default fetchUserAttributes;
