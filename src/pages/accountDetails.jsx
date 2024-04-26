@@ -2,21 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useFetchUserAttributes } from '../Account-Details';
 import { useAuthenticator } from "@aws-amplify/ui-react";
 
-const useFetchUserAttributes = () => {
-    const { currentUser } = useAuthenticator();
-
-    const fetchUserAttributes = async () => {
-        try {
-            return currentUser.attributes;
-        } catch (error) {
-            console.error('Error fetching user attributes:', error);
-            return null;
-        }
-    };
-
-    return { fetchUserAttributes };
-};
-
 const AccountDetails = () => {
     const { fetchUserAttributes } = useFetchUserAttributes();
     const [userAttributes, setUserAttributes] = useState(null);
