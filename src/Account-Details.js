@@ -1,8 +1,8 @@
-import {Auth} from "@aws-amplify/auth"
+import {Authenticator} from "@aws-amplify"
 
     export const fetchUserAttributes = async () => {
         try {
-            const currentUser = await Auth.currentAuthenticatedUser();
+            const currentUser = await Authenticator.currentAuthenticatedUser();
             return currentUser.attributes;
         } catch (error) {
             console.error('Error fetching user attributes:', error);
