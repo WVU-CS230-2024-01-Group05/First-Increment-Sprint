@@ -2,16 +2,19 @@ import React, { useState, useEffect } from 'react';
 import { useFetchUserAttributes } from '../Account-Details';
 
 const AccountDetails = () => {
+    const { fetchUserAttributes } = useFetchUserAttributes();
     const [userAttributes, setUserAttributes] = useState(null);
-
     useEffect(() => {
-        const attributes =  useFetchUserAttributes();
         const getUserAttributes = async () => {
-            setUserAttributes(attributes);
+            try {
+                const attributes = await fetchUserAttributes();
+                setUserAttributes(attributes);
+            } catch (error) {
+                console.error('Error fetching user attributes:', error);
+            }
         };
-
         getUserAttributes();
-    }, []);
+    }, [fetchUserAttributes]);
 
     return (
         <div className="account-details">
