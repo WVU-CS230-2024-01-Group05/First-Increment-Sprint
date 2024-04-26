@@ -5,8 +5,8 @@ const AccountDetails = () => {
     const [userAttributes, setUserAttributes] = useState(null);
 
     useEffect(() => {
+        const attributes =  useFetchUserAttributes();
         const getUserAttributes = async () => {
-            const attributes = await useFetchUserAttributes();
             setUserAttributes(attributes);
         };
 
