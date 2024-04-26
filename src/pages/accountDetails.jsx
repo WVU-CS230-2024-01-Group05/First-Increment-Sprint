@@ -1,45 +1,35 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { fetchUserAttributes } from '../Account-Details';
 
 const AccountDetails = () => {
-    // Uncomment and use the following code if you want to fetch user details
-    /*
     const [userAttributes, setUserAttributes] = useState(null);
+
     useEffect(() => {
-        async function fetchDetails() {
-            try {
-                const user = await Auth.currentAuthenticatedUser();
-                const attributes = await Auth.userAttributes(user);
-                setUserAttributes(attributes);
-            } catch (err) {
-                console.log(err);
-            }
-        }
-        fetchDetails();
+        const getUserAttributes = async () => {
+            const attributes = await fetchUserAttributes();
+            setUserAttributes(attributes);
+        };
+
+        getUserAttributes();
     }, []);
-    */
 
     return (
         <div className="account-details">
             <h1>Account Details</h1>
-            <form>
-                <div className="form-group">
-                    <label htmlFor="username">Username:</label>
-                    <input type="text" id="username" name="username" />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="fullName">Full Name:</label>
-                    <input type="text" id="fullName" name="fullName" />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="description">Biography:</label>
-                    <textarea id="description" name="description"></textarea>
-                </div>
-                <button type="submit" className="save-button">Save Changes</button>
-            </form>
-            <Link to="/" className="home-link">Home</Link>
+            {userAttributes && (
+                <form>
+                    <div className="form-group">
+                        <label htmlFor="email">Email:</label>
+                        <input type="text" id="email" name="email" value={userAttributes.email} readOnly />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="name">Name:</label>
+                        <input type="text" id="name" name="name" value={userAttributes.name || ''} readOnly />
+                    </div>
+                </form>
+            )}
         </div>
     );
-}
+};
 
 export default AccountDetails;

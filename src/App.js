@@ -6,6 +6,7 @@ import Post from "./pages/Post";
 import Posts from "./pages/Test";
 import Filter from "./pages/filter";
 import Results from "./pages/Results";
+import TestPost from "./pages/TestPost";
 import {
   BrowserRouter,
   Routes,
@@ -22,12 +23,14 @@ import {
   Image,
   View,
   withAuthenticator,
+  Authenticator,
 } from "@aws-amplify/ui-react";
 import { generateClient} from 'aws-amplify/api';
 import { uploadData, getUrl, remove } from 'aws-amplify/storage';
 
 function App() {
   return (
+    <Authenticator.Provider>
     <div className="App">
       <BrowserRouter>
         <Routes>
@@ -37,9 +40,11 @@ function App() {
           <Route path="/Test" element={<Posts />} />
           <Route path="/search-results" element={<Results />} />
           <Route path="/Filter" element={<Filter />} />
+          <Route path="/TestPost" element={<TestPost/>} />
         </Routes>
       </BrowserRouter>
     </div>
+    </Authenticator.Provider>
   );
 }
 
