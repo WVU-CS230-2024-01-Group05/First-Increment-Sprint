@@ -14,9 +14,11 @@ Amplify.configure(config);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
+  <Authenticator.Provider>
   <React.StrictMode>
     <App />
   </React.StrictMode>
+  </Authenticator.Provider>
 );
 
 const client = new ApolloClient({
