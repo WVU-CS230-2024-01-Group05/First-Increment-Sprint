@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { fetchUserAttributes} from '../Account-Details';
+import { useFetchUserAttributes } from '../Account-Details';
 
 const AccountDetails = () => {
     const [userAttributes, setUserAttributes] = useState(null);
 
     useEffect(() => {
         const getUserAttributes = async () => {
-            const attributes = await fetchUserAttributes();
+            const attributes = await useFetchUserAttributes();
             setUserAttributes(attributes);
         };
 

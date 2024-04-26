@@ -1,5 +1,4 @@
 import {useAuthenticator,AccountSettings, Authenticator} from "@aws-amplify/ui-react"
-import { fetchUserAttributes } from "aws-amplify/auth";
 
    export const useFetchUserAttributes = async () => {
     const {currentUser} = useAuthenticator();
@@ -14,4 +13,4 @@ import { fetchUserAttributes } from "aws-amplify/auth";
     };
     return fetchUserAttributes;
 };
-    export default fetchUserAttributes;
+    export default useFetchUserAttributes;
