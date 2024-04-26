@@ -4,6 +4,7 @@ import { useFetchUserAttributes } from '../Account-Details';
 const AccountDetails = () => {
     const { fetchUserAttributes } = useFetchUserAttributes();
     const [userAttributes, setUserAttributes] = useState(null);
+
     useEffect(() => {
         const getUserAttributes = async () => {
             try {
@@ -13,6 +14,7 @@ const AccountDetails = () => {
                 console.error('Error fetching user attributes:', error);
             }
         };
+
         getUserAttributes();
     }, [fetchUserAttributes]);
 
