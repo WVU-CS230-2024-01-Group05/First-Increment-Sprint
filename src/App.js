@@ -31,7 +31,6 @@ import { uploadData, getUrl, remove } from 'aws-amplify/storage';
 function App() {
   return (
     <div className="App">
-    <Authenticator.Provider>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Search />} />
@@ -43,7 +42,6 @@ function App() {
           <Route path="/TestPost" element={<TestPost/>} />
         </Routes>
       </BrowserRouter>
-    </Authenticator.Provider>
     </div>
   );
 }

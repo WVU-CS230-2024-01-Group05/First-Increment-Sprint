@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { Amplify } from 'aws-amplify';
 import config from './aws-exports';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+import { Authenticator } from '@aws-amplify/ui-react';
 
 Amplify.configure(config);
 
@@ -24,9 +25,11 @@ const client = new ApolloClient({
 });
 
 ReactDOM.render(
+  <Authenticator>
   <ApolloProvider client={client}>
     <App />
   </ApolloProvider>,
+  </Authenticator>,
   document.getElementById('root')
 );
 
