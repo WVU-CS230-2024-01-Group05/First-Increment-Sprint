@@ -23,12 +23,14 @@ import {
   Image,
   View,
   withAuthenticator,
+  Authenticator,
 } from "@aws-amplify/ui-react";
 import { generateClient} from 'aws-amplify/api';
 import { uploadData, getUrl, remove } from 'aws-amplify/storage';
 
 function App() {
   return (
+    <Authenticator.Provider>
     <div className="App">
       <BrowserRouter>
         <Routes>
@@ -42,6 +44,7 @@ function App() {
         </Routes>
       </BrowserRouter>
     </div>
+    </Authenticator.Provider>
   );
 }
 
