@@ -34,34 +34,18 @@
 
 .search-container input[type="text"],
 .search-container button,
-
-
-.search-container input[type="text"] {
-  flex-grow: 1; 
-}
-
-.search-container button {
-  background-color: green;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
 .search-container select {
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ddd;
-  background-color: white;
-  cursor: pointer;
+  flex: 1;  
+  margin: 5px;  
 }
 
 .button-container {
   position: fixed;
-  top: 60px;
+  bottom: 0;  
   width: 100%;
   background-color: #f8f9fa;
   padding: 10px 0;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.1); 
   z-index: 900;
   display: flex;
   justify-content: center;
