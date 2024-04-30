@@ -4,7 +4,7 @@ import './tests.css';
 import { Link } from 'react-router-dom';
 import { Heading, View, useAuthenticator, withAuthenticator } from "@aws-amplify/ui-react";
 
-const Search = ({ onSearchChange }) => {
+const Search = () => {
   const [posts, setPosts] = useState([]); // State to hold posts
   const { signOut } = useAuthenticator();
 
@@ -53,7 +53,7 @@ const Search = ({ onSearchChange }) => {
           </div>
         </View>
         <div className="posts-container">
-            <h1>Featured Posts</h1>
+            <h1>Featured Recipes</h1>
             {posts.map(post => (
                 <div key={post.PostID} className="post-item">
                     <h3>{post.Title}</h3>

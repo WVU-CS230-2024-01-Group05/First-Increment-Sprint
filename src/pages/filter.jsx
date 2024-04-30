@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import testRecipes from "./testRecipes.js";
 import { Link } from 'react-router-dom';
 import "./filter.css";
+import './tests.css';
 
 const Filter = () => { 
     const [searchInput, setSearchInput] = useState('');
@@ -63,24 +64,25 @@ const Filter = () => {
         <button className="filterButton" onClick={Search}>Search Recipes</button>
         <ul>
         <p> 
-        <h2> Exact Match Recipes: </h2>
+        <div className="posts-container">
+        <h2>Exact Match Recipes:</h2>
         {exclusiveRecipes.map((recipe) => (
-            <li key={recipe.id}>
-              <h3>{recipe.title}</h3>
-              <p>Ingredients: {recipe.ingredients.join(', ')}</p>
-              <p>Directions: {recipe.directions}</p>
-            </li>
-          ))}
-          </p>
-          <p> 
-          <h2> Recipes that include 1 or more of your ingredients: </h2>
-          {filteredRecipes.map((recipe) => (
-            <li key={recipe.id}>
-              <h3>{recipe.title}</h3>
-              <p>Ingredients: {recipe.ingredients.join(', ')}</p>
-              <p>Directions: {recipe.directions}</p>
-            </li>
-          ))}
+        <div key={recipe.id} className="post-item">
+            <h3 className="post-title">{recipe.title}</h3>
+            <p className="post-content">Ingredients: {recipe.ingredients.join(', ')}</p>
+            <p className="post-content">Directions: {recipe.directions}</p>
+        </div>
+        ))}
+
+      <h2>Recipes that include 1 or more of your ingredients:</h2>
+      {filteredRecipes.map((recipe) => (
+        <div key={recipe.id} className="post-item">
+            <h3 className="post-title">{recipe.title}</h3>
+            <p className="post-content">Ingredients: {recipe.ingredients.join(', ')}</p>
+            <p className="post-content">Directions: {recipe.directions}</p>
+        </div>
+      ))}
+      </div>
           </p>
         </ul>
         <Link to="/">Home</Link>

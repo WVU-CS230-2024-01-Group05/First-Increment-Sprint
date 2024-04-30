@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useFetchUserAttributes } from '../Account-Details';
-import { getCurrentUser } from 'aws-amplify/auth';
+import { Link } from 'react-router-dom';
 
 const AccountDetails = () => {
     const { fetchUserAttributes } = useFetchUserAttributes();
@@ -19,8 +19,7 @@ const AccountDetails = () => {
         getUserAttributes();
     }, [fetchUserAttributes]);
 
-        const { username } = getCurrentUser();
-        console.log(`The username: ${username}`);
+        console.log(`The username: ${userAttributes}`);
 
     return (
         <div className="account-details">
@@ -33,6 +32,7 @@ const AccountDetails = () => {
                         <label htmlFor="name">Name:</label>
                         <input type="text" id="name" name="name" value={"nomnom"} readOnly />
                     </div>
+             <Link to="/">Home</Link>
         </div>
     );
 };

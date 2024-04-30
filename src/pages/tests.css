@@ -5,27 +5,36 @@
 }
 
 .post-item {
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
     padding: 20px;
     margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.post-title {
-    font-size: 20px;
+.post-item h3 {
+    font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
+    color: #333;
 }
 
-.post-content {
+.post-item p {
     font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 10px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    color: #666;
 }
 
 .link-back {
-    display: block;
+    display: inline-block;
     margin-top: 20px;
     text-decoration: none;
     color: #007bff;
+    font-weight: bold;
+}
+
+.link-back:hover {
+    text-decoration: underline;
 }
