@@ -302,7 +302,7 @@ const testRecipes = [
   {
     id: 51, 
     title: "PB & J",
-    ingredients: ["Peanut Butter", "Jelly", "Bread"],
+    ingredients: ["peanut butter", "jelly", "bread"],
     directions: "Put it all together"
   }
     
