@@ -47,6 +47,7 @@ const Filter = () => {
             type="text" 
             placeholder="Please enter your ingredients"
             value={searchInput}
+            className="filterSearchBar"
             onChange={(e) => setSearchInput(e.target.value)}
           />
           <button className="filterButton" onClick={AddIngredient}>Click to Add Ingredient</button>
