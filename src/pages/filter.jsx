@@ -24,7 +24,7 @@ const Filter = () => {
     };
 
   
-    const Search = () => {
+    const Search = () => { 
       const filtered = testRecipes.filter((recipe) =>
         recipe.ingredients.some((ingredient) =>
           ingredients.includes(ingredient.toLowerCase())
