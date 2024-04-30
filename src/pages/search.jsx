@@ -4,7 +4,7 @@ import './tests.css';
 import { Link } from 'react-router-dom';
 import { Heading, View, useAuthenticator, withAuthenticator } from "@aws-amplify/ui-react";
 
-const Search = ({ onSearchChange }) => {
+const Search = () => {
   const [posts, setPosts] = useState([]); // State to hold posts
   const { signOut } = useAuthenticator();
 

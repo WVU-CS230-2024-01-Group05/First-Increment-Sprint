@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { useFetchUserAttributes } from '../Account-Details';
-import { getCurrentUser } from 'aws-amplify/auth';
 import { Link } from 'react-router-dom';
 
 const AccountDetails = () => {
