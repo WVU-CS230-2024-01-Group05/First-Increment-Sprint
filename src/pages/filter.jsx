@@ -36,7 +36,7 @@ const Filter = () => {
       <div>
         <div>
           <input
-            type="text"
+            type="text" 
             placeholder="Please enter your ingredients"
             value={searchInput}
             onChange={(e) => setSearchInput(e.target.value)}
@@ -57,6 +57,7 @@ const Filter = () => {
             <li key={recipe.id}>
               <h3>{recipe.title}</h3>
               <p>Ingredients: {recipe.ingredients.join(', ')}</p>
+              <p>Directions: {recipe.directions}</p>
             </li>
           ))}
         </ul>
