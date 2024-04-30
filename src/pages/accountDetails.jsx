@@ -19,8 +19,7 @@ const AccountDetails = () => {
         getUserAttributes();
     }, [fetchUserAttributes]);
 
-        const { username } = getCurrentUser();
-        console.log(`The username: ${username}`);
+        console.log(`The username: ${attributes}`);
 
     return (
         <div className="account-details">
