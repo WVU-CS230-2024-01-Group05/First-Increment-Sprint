@@ -298,8 +298,13 @@ const testRecipes = [
     title: "Bruschetta",
     ingredients: ["baguette", "tomatoes", "garlic", "basil", "olive oil", "balsamic vinegar", "salt", "pepper"],
     directions: "Slice baguette, toast at 400°F (200°C) for 5-7 minutes, top with diced tomatoes, garlic, basil, drizzle with oil, vinegar, season."
+  },
+  {
+    id: 51, 
+    title: "PB & J",
+    ingredients: ["Peanut Butter", "Jelly", "Bread"],
+    directions: "Put it all together"
   }
-
     
   ];
 
