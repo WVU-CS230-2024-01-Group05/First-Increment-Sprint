@@ -42,27 +42,18 @@ body {
   border-color: #4CAF50;
 }
 
-.search-container button {
-  background-color: #4CAF50; 
-  color: white; 
-  border: none; 
-  padding: 10px 20px; 
-  cursor: pointer; 
-  transition: background-color 0.3s; 
+.search-container {
+  display: flex;           
+  align-items: center;    
+  gap: 10px;               
 }
 
-.search-container button:hover {
-  background-color: #45a049;
+.search-container input[type="text"], .search-container select {
+  flex-grow: 1;          
 }
 
-@media (max-width: 768px) {
-  .search-container form {
-    flex-direction: column
-  }
-  
-  .button-container {
-    padding: 5px 0; 
-  }
+.search-container nav {
+  margin-left: auto;    
 }
 
 .save-button:hover {

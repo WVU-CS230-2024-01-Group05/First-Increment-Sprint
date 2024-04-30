@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import testRecipes from "./testRecipes.js";
 import { Link } from 'react-router-dom';
+import "./filter.css";
 
 const Filter = () => {
     const [searchInput, setSearchInput] = useState('');
