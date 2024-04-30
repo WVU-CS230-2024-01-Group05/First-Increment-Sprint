@@ -7,14 +7,15 @@ const Filter = () => {
     const [ingredients, setIngredients] = useState([]);
     const [filteredRecipes, setFilteredRecipes] = useState([]);
   
-    const handleAddIngredient = () => {
-      if (!ingredients.includes(searchInput)) {
-        setIngredients([...ingredients, searchInput.trim()]);
+    const AddIngredient = () => {
+      const input = searchInput.trim();
+      if( input !== '' && !ingredients.includes(input)){
+        setIngredients(ingredients.concat(input));
         setSearchInput('');
       }
     };
   
-    const handleRemoveIngredient = (ingredientToRemove) => {
+    const RemoveIngredient = (ingredientToRemove) => {
       const newList = ingredients.filter(
         (ingredient) => ingredient !== ingredientToRemove
       );
@@ -22,7 +23,7 @@ const Filter = () => {
     };
 
   
-    const handleSearch = () => {
+    const Search = () => {
       const filtered = testRecipes.filter((recipe) =>
         recipe.ingredients.some((ingredient) =>
           ingredients.includes(ingredient.toLowerCase())
@@ -40,22 +41,23 @@ const Filter = () => {
             value={searchInput}
             onChange={(e) => setSearchInput(e.target.value)}
           />
-          <button onClick={handleAddIngredient}>Click to Add Ingredient</button>
+          <button onClick={AddIngredient}>Click to Add Ingredient</button>
         </div>
         <div>
           {ingredients.map((ingredient) => (
             <div key={ingredient}>
               {ingredient}
-              <button onClick={() => handleRemoveIngredient(ingredient)}>X</button>
+              <button onClick={() => RemoveIngredient(ingredient)}>X</button>
             </div>
           ))}
         </div>
-        <button onClick={handleSearch}>Search Recipes</button>
+        <button onClick={Search}>Search Recipes</button>
         <ul>
           {filteredRecipes.map((recipe) => (
             <li key={recipe.id}>
               <h3>{recipe.title}</h3>
               <p>Ingredients: {recipe.ingredients.join(', ')}</p>
+              <p>Directions: {recipe.directions}</p>
             </li>
           ))}
         </ul>

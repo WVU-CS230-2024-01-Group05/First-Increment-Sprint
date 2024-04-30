@@ -26,7 +26,7 @@ const AccountDetails = () => {
             <h1>Account Details</h1>
                     <div className="form-group">
                         <label htmlFor="email">Email:</label>
-                        <input type="text" id="email" name="email" value={user.id} readOnly />
+                        <input type="text" id="email" name="email" value={user.ID} readOnly />
                     </div>
                     <div className="form-group">
                         <label htmlFor="name">Name:</label>
