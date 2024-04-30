@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { useFetchUserAttributes } from '../Account-Details';
-import { useAuthenticator } from "@aws-amplify/ui-react";
 
 const AccountDetails = () => {
     const { fetchUserAttributes } = useFetchUserAttributes();
