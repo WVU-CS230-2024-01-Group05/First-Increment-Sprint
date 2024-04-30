@@ -59,7 +59,7 @@ const Post = () => {
     };
 
     return (
-        <div className="App-header">
+        <div className="post">
             <div className="container">
                 <h1>Create Your Recipe</h1>
                 <form onSubmit={handleSubmit}>
