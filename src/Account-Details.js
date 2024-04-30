@@ -1,11 +1,15 @@
-import { useAuthenticator } from "@aws-amplify/ui-react";
+import { getCurrentUser } from "aws-amplify/auth";
 
 export const useFetchUserAttributes = () => {
-    const { currentUser } = useAuthenticator();
+    const currentUser = getCurrentUser();
 
     const fetchUserAttributes = async () => {
         try {
-            return currentUser.attributes;
+            if (currentUser) {
+                return currentUser.attributes;
+            } else {
+                return null;
+            }
         } catch (error) {
             console.error('Error fetching user attributes:', error);
             return null;

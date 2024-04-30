@@ -13,8 +13,8 @@ function TestPost() {
     async function handleSubmit(event) {
         event.preventDefault();
         try {
-            const response = await fetch('https://z7pmt81mal.execute-api.us-east-2.amazonaws.com/recipes', {
-                method: 'POST',
+            const response = await fetch('https://z7pmt81mal.execute-api.us-east-2.amazonaws.com/posts', {
+                method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'
                 },

@@ -1,21 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useFetchUserAttributes } from '../Account-Details';
-import { useAuthenticator } from "@aws-amplify/ui-react";
-
-const useFetchUserAttributes = () => {
-    const { currentUser } = useAuthenticator();
-
-    const fetchUserAttributes = async () => {
-        try {
-            return currentUser.attributes;
-        } catch (error) {
-            console.error('Error fetching user attributes:', error);
-            return null;
-        }
-    };
-
-    return { fetchUserAttributes };
-};
+import { getCurrentUser } from 'aws-amplify/auth';
 
 const AccountDetails = () => {
     const { fetchUserAttributes } = useFetchUserAttributes();
@@ -37,18 +22,14 @@ const AccountDetails = () => {
     return (
         <div className="account-details">
             <h1>Account Details</h1>
-            {userAttributes && (
-                <form>
                     <div className="form-group">
                         <label htmlFor="email">Email:</label>
                         <input type="text" id="email" name="email" value={userAttributes.email} readOnly />
                     </div>
                     <div className="form-group">
                         <label htmlFor="name">Name:</label>
-                        <input type="text" id="name" name="name" value={userAttributes.name || ''} readOnly />
+                        <input type="text" id="name" name="name" value={userAttributes.name} readOnly />
                     </div>
-                </form>
-            )}
         </div>
     );
 };
