@@ -53,7 +53,7 @@ const Search = ({ onSearchChange }) => {
           </div>
         </View>
         <div className="posts-container">
-            <h1>Posts from DynamoDB</h1>
+            <h1>Featured Posts</h1>
             {posts.map(post => (
                 <div key={post.PostID} className="post-item">
                     <h3>{post.Title}</h3>
