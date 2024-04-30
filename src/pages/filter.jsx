@@ -63,7 +63,7 @@ const Filter = () => {
         <button className="filterButton" onClick={Search}>Search Recipes</button>
         <ul>
         <p> 
-        <h2> Recipes Exclusive to your ingredients: </h2>
+        <h2> Recipes you can make now: </h2>
         {exclusiveRecipes.map((recipe) => (
             <li key={recipe.id}>
               <h3>{recipe.title}</h3>
@@ -73,7 +73,7 @@ const Filter = () => {
           ))}
           </p>
           <p> 
-          <h2> Recipes that include your ingredients: </h2>
+          <h2> Recipes you're missing a few ingredients: </h2>
           {filteredRecipes.map((recipe) => (
             <li key={recipe.id}>
               <h3>{recipe.title}</h3>
