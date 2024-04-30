@@ -39,6 +39,12 @@
   margin: 5px;  
 }
 
+.search-container select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 .button-container {
   position: fixed;
   bottom: 0;  
