@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function TestPost() {
+
     const [formData, setFormData] = useState({
         recipeName: '',
         description: '',
@@ -9,11 +10,8 @@ function TestPost() {
         directions: ''
     });
 
-    const history = useHistory(); // Access history object for navigation
-
     async function handleSubmit(event) {
         event.preventDefault();
-        
         try {
             const response = await fetch('https://z7pmt81mal.execute-api.us-east-2.amazonaws.com/posts', {
                 method: 'PUT',
@@ -22,11 +20,10 @@ function TestPost() {
                 },
                 body: JSON.stringify(formData)
             });
-
             if (response.ok) {
                 console.log('Recipe created successfully');
-                // Redirect to '/Test' after successful recipe creation
-                history.push('/Test');
+                <Link to="/Test">Posts</Link>
+                
             } else {
                 console.error('Failed to create recipe');
             }
@@ -67,6 +64,6 @@ function TestPost() {
             <Link to="/">Home</Link>
         </div>
     );
-}
 
-export default TestPost;
+}
+export default TestPost
