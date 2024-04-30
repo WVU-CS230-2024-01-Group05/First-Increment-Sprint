@@ -49,10 +49,10 @@ Create an account at https://main.d27jakjzz3w69s.amplifyapp.com/. Sign into the 
 ## Credits
 Built by:
 
-Tiago Breunig
-Ahilleas Fetras
-Ahmad Haidaree
-James Kmetz
-Ian Schiedenhelm
+Tiago Breunig,
+Ahilleas Fetras,
+Ahmad Haidaree,
+James Kmetz,
+Ian Schiedenhelm,
 Arjun Vijay
 
