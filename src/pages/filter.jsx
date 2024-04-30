@@ -41,17 +41,17 @@ const Filter = () => {
             value={searchInput}
             onChange={(e) => setSearchInput(e.target.value)}
           />
-          <button onClick={AddIngredient}>Click to Add Ingredient</button>
+          <button className="filterButton" onClick={AddIngredient}>Click to Add Ingredient</button>
         </div>
         <div>
           {ingredients.map((ingredient) => (
             <div key={ingredient}>
               {ingredient}
-              <button onClick={() => RemoveIngredient(ingredient)}>X</button>
+              <button className="filterButton" onClick={() => RemoveIngredient(ingredient)}>X</button>
             </div>
           ))}
         </div>
-        <button onClick={Search}>Search Recipes</button>
+        <button className="filterButton" onClick={Search}>Search Recipes</button>
         <ul>
           {filteredRecipes.map((recipe) => (
             <li key={recipe.id}>
