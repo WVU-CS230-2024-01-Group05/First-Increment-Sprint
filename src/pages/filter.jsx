@@ -36,7 +36,7 @@ const Filter = () => {
       <div>
         <div>
           <input
-            type="text"
+            type="text" 
             placeholder="Please enter your ingredients"
             value={searchInput}
             onChange={(e) => setSearchInput(e.target.value)}

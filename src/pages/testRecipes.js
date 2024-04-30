@@ -1,6 +1,6 @@
 const testRecipes = [
   {
-    id: 1,
+    id: 1, 
     title: "Margherita Pizza",
     ingredients: ["dough", "mozzarella cheese", "tomato sauce", "fresh basil"],
     directions: "Roll out dough, spread tomato sauce, add mozzarella, bake at 450°F (230°C) until crust is golden, top with fresh basil."
