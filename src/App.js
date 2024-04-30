@@ -4,8 +4,6 @@ import AccountDetails from "./pages/accountDetails";
 import './App.css';
 import Post from "./pages/Post";
 import Filter from "./pages/filter";
-import Results from "./pages/Results";
-import TestPost from "./pages/TestPost";
 import {
   BrowserRouter,
   Routes,
@@ -22,9 +20,7 @@ function App() {
           <Route path="/" element={<Search />} />
           <Route path="/post" element={<Post />} />
           <Route path="/account" element={<AccountDetails />} />
-          <Route path="/search-results" element={<Results />} />
           <Route path="/Filter" element={<Filter />} />
-          <Route path="/TestPost" element={<TestPost/>} />
         </Routes>
       </BrowserRouter>
     </div>
