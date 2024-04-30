@@ -26,13 +26,13 @@ const testRecipes = [
   {
     id: 5,
     title: "Grilled Salmon",
-    ingredients: ["salmon fillets", "olive oil", "lemon juice", "salt", "pepper", "fresh herbs"],
+    ingredients: ["salmon", "olive oil", "lemon juice", "salt", "pepper", "fresh herbs"],
     directions: "Marinate salmon, grill at medium-high heat (about 400°F/200°C) until cooked through, garnish with fresh herbs and lemon."
   },
   {
     id: 6,
     title: "Vegetable Stir-Fry",
-    ingredients: ["mixed vegetables", "tofu or chicken", "soy sauce", "sesame oil", "garlic", "ginger"],
+    ingredients: ["mixed vegetables", "chicken", "soy sauce", "sesame oil", "garlic", "ginger"],
     directions: "Sauté tofu or chicken, add veggies, soy sauce, garlic, and ginger."
   },
   {
@@ -44,7 +44,7 @@ const testRecipes = [
   {
     id: 8,
     title: "Chicken Stir-Fry",
-    ingredients: ["chicken breast", "vegetables (bell peppers, broccoli, carrots)", "soy sauce", "garlic", "ginger"],
+    ingredients: ["chicken", "vegetables (bell peppers, broccoli, carrots)", "soy sauce", "garlic", "ginger"],
     directions: "Stir-fry chicken and veggies, add soy sauce, garlic, and ginger, cook until tender."
   },
   {
@@ -68,13 +68,13 @@ const testRecipes = [
   {
     id: 12,
     title: "Chicken Curry",
-    ingredients: ["chicken thighs", "curry powder", "coconut milk", "onion", "garlic", "ginger", "vegetables (potatoes, carrots, peas)"],
+    ingredients: ["chicken", "curry powder", "coconut milk", "onion", "garlic", "ginger", "potatoes", "carrots", "peas"],
     directions: "Brown chicken, sauté onions, garlic, ginger, add curry powder, coconut milk, veggies, simmer at low heat until chicken is cooked and tender."
   },
   {
     id: 13,
     title: "Egg Fried Rice",
-    ingredients: ["cooked rice", "eggs", "vegetables (peas, carrots, corn)", "soy sauce", "sesame oil", "garlic", "green onions"],
+    ingredients: ["rice", "eggs", "peas", "carrots", "corn", "soy sauce", "sesame oil", "garlic", "green onions"],
     directions: "Scramble eggs, sauté veggies, add rice, soy sauce, garlic, green onions, cook until heated through."
   },
   {
@@ -92,7 +92,7 @@ const testRecipes = [
   {
     id: 16,
     title: "Beef and Broccoli Stir-Fry",
-    ingredients: ["beef sirloin", "broccoli", "soy sauce", "brown sugar", "garlic", "ginger", "cornstarch"],
+    ingredients: ["beef", "broccoli", "soy sauce", "brown sugar", "garlic", "ginger", "cornstarch"],
     directions: "Marinate beef in soy sauce, brown sugar, garlic, ginger, stir-fry with broccoli, sauce with cornstarch mixture."
   },
   {
@@ -122,13 +122,13 @@ const testRecipes = [
   {
     id: 21,
     title: "French Toast",
-    ingredients: ["bread slices", "eggs", "milk", "vanilla extract", "cinnamon", "butter", "maple syrup"],
+    ingredients: ["bread", "eggs", "milk", "vanilla extract", "cinnamon", "butter", "maple syrup"],
     directions: "Dip bread in egg mixture, cook in butter on griddle or pan at medium heat until golden, serve with maple syrup."
   },
   {
     id: 22,
     title: "Chicken Noodle Soup",
-    ingredients: ["chicken thighs", "chicken broth", "carrots", "celery", "onion", "egg noodles", "garlic", "parsley"],
+    ingredients: ["chicken", "chicken broth", "carrots", "celery", "onion", "egg noodles", "garlic", "parsley"],
     directions: "Cook chicken in broth, add veggies, noodles, garlic, parsley, simmer at low heat until flavors blend."
   },
   {
@@ -146,7 +146,7 @@ const testRecipes = [
   {
     id: 25,
     title: "Spinach and Feta Stuffed Chicken",
-    ingredients: ["chicken breasts", "spinach", "feta cheese", "garlic", "olive oil", "salt", "pepper"],
+    ingredients: ["chicken", "spinach", "feta", "garlic", "olive oil", "salt", "pepper"],
     directions: "Stuff chicken with spinach, feta, garlic, sear in oil, bake at 375°F (190°C) until cooked through."
   }
 
