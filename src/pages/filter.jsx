@@ -71,13 +71,13 @@ const Filter = () => {
           </li></>
           ))}
           <p> </p>
-          {filteredRecipes.map((recipe) => (
+          {/* {filteredRecipes.map((recipe) => (
               <><h2> Recipes that include your ingredients: </h2><li key={recipe.id}>
               <h3>{recipe.title}</h3>
               <p>Ingredients: {recipe.ingredients.join(', ')}</p>
               <p>Directions: {recipe.directions}</p>
             </li></>
-          ))}
+          ))} */}
         </ul>
         <Link to="/">Home</Link>
       </div>
