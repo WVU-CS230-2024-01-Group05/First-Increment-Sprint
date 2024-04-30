@@ -7,6 +7,7 @@ const Filter = () => {
     const [searchInput, setSearchInput] = useState('');
     const [ingredients, setIngredients] = useState([]);
     const [filteredRecipes, setFilteredRecipes] = useState([]);
+    const [exclusiveRecipes, setExclusiveRecipes] = useState([]);
   
     const AddIngredient = () => {
       const input = searchInput.trim();
@@ -30,7 +31,13 @@ const Filter = () => {
           ingredients.includes(ingredient.toLowerCase())
         )
       );
+      const filtered2 = testRecipes.filter((recipe) =>
+        recipe.ingredients.every((ingredient) =>
+          ingredients.includes(ingredient.toLowerCase())
+        )
+      );
       setFilteredRecipes(filtered);
+      setExclusiveRecipes(filtered2);
     };
   
     return (
@@ -54,6 +61,17 @@ const Filter = () => {
         </div>
         <button className="filterButton" onClick={Search}>Search Recipes</button>
         <ul>
+        <p> </p>
+        <h2> Recipes Exclusive to your ingredients: </h2>
+        {exclusiveRecipes.map((recipe) => (
+            <li key={recipe.id}>
+              <h3>{recipe.title}</h3>
+              <p>Ingredients: {recipe.ingredients.join(', ')}</p>
+              <p>Directions: {recipe.directions}</p>
+            </li>
+          ))}
+          <p> </p>
+          <h2> Recipes that include your ingredients: </h2>
           {filteredRecipes.map((recipe) => (
             <li key={recipe.id}>
               <h3>{recipe.title}</h3>
