@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../App.css';
+import './tests.css';
 import { Link } from 'react-router-dom';
 import { Heading, View, useAuthenticator, withAuthenticator } from "@aws-amplify/ui-react";
 
@@ -51,20 +52,18 @@ const Search = ({ onSearchChange }) => {
             </nav>
           </div>
         </View>
-        <div>
-          <h1>Featured Recipes</h1>
-          <ul>
-            {posts && posts.map(post => (
-              <li key={post.PostID}>
-                <h3>{post.Title}</h3>
-                <p>Description: {post.Description}</p>
-                <p>Ingredients: {post.Ingredients}</p>
-                <p>Directions: {post.Directions}</p>
-                <p>Likes: {post.Likes}</p>
-                <hr />
-              </li>
+        <div className="posts-container">
+            <h1>Posts from DynamoDB</h1>
+            {posts.map(post => (
+                <div key={post.PostID} className="post-item">
+                    <h3>{post.Title}</h3>
+                    <p>Description: {post.Description}</p>
+                    <p>Ingredients: {post.Ingredients}</p>
+                    <p>Directions: {post.Directions}</p>
+                    <p>Likes: {post.Likes}</p>
+                    <hr />
+                </div>
             ))}
-          </ul>
         </div>
       </div>
     </div>
