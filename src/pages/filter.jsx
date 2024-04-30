@@ -62,22 +62,27 @@ const Filter = () => {
         <button className="filterButton" onClick={Search}>Search Recipes</button>
         <ul>
         <p> </p>
+        <div>
+        <h2> Recipes Exclusive to your ingredients: </h2>
         {exclusiveRecipes.map((recipe) => (
-          <><h2> Recipes Exclusive to your ingredients: </h2>
-          <li key={recipe.id}>
-            <h3>{recipe.title}</h3>
-            <p>Ingredients: {recipe.ingredients.join(', ')}</p>
-            <p>Directions: {recipe.directions}</p>
-          </li></>
-          ))}
-          <p> </p>
-          {/* {filteredRecipes.map((recipe) => (
-              <><h2> Recipes that include your ingredients: </h2><li key={recipe.id}>
+            <li key={recipe.id}>
               <h3>{recipe.title}</h3>
               <p>Ingredients: {recipe.ingredients.join(', ')}</p>
               <p>Directions: {recipe.directions}</p>
-            </li></>
-          ))} */}
+            </li>
+          ))}
+          <p> </p>
+          </div>
+          <div>
+          <h2> Recipes that include your ingredients: </h2>
+          {filteredRecipes.map((recipe) => (
+            <li key={recipe.id}>
+              <h3>{recipe.title}</h3>
+              <p>Ingredients: {recipe.ingredients.join(', ')}</p>
+              <p>Directions: {recipe.directions}</p>
+            </li>
+          ))}
+          </div>
         </ul>
         <Link to="/">Home</Link>
       </div>
