@@ -3,7 +3,7 @@ import testRecipes from "./testRecipes.js";
 import { Link } from 'react-router-dom';
 import "./filter.css";
 
-const Filter = () => {
+const Filter = () => { 
     const [searchInput, setSearchInput] = useState('');
     const [ingredients, setIngredients] = useState([]);
     const [filteredRecipes, setFilteredRecipes] = useState([]);
@@ -62,8 +62,7 @@ const Filter = () => {
         </div>
         <button className="filterButton" onClick={Search}>Search Recipes</button>
         <ul>
-        <p> </p>
-        <div>
+        <p> 
         <h2> Recipes Exclusive to your ingredients: </h2>
         {exclusiveRecipes.map((recipe) => (
             <li key={recipe.id}>
@@ -72,9 +71,8 @@ const Filter = () => {
               <p>Directions: {recipe.directions}</p>
             </li>
           ))}
-          <p> </p>
-          </div>
-          <div>
+          </p>
+          <p> 
           <h2> Recipes that include your ingredients: </h2>
           {filteredRecipes.map((recipe) => (
             <li key={recipe.id}>
@@ -83,7 +81,7 @@ const Filter = () => {
               <p>Directions: {recipe.directions}</p>
             </li>
           ))}
-          </div>
+          </p>
         </ul>
         <Link to="/">Home</Link>
       </div>
