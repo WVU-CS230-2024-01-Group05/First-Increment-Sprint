@@ -30,7 +30,7 @@ const AccountDetails = () => {
                     </div>
                     <div className="form-group">
                         <label htmlFor="name">Name:</label>
-                        <input type="text" id="name" name="name" value={"nomnom"} readOnly />
+                        <input type="text" id="name" name="name" value={"NomNom"} readOnly />
                     </div>
              <Link to="/">Home</Link>
         </div>
