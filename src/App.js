@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Search from "./pages/search";
 import AccountDetails from "./pages/accountDetails";
 import './App.css';
@@ -10,23 +10,10 @@ import TestPost from "./pages/TestPost";
 import {
   BrowserRouter,
   Routes,
-  Route,
-  Link} from 'react-router-dom';
+  Route} from 'react-router-dom';
 import "./App.css";
 import "@aws-amplify/ui-react/styles.css";
-import {
-  Button,
-  Flex,
-  Heading,
-  Text,
-  TextField,
-  Image,
-  View,
-  withAuthenticator,
-  Authenticator,
-} from "@aws-amplify/ui-react";
-import { generateClient} from 'aws-amplify/api';
-import { uploadData, getUrl, remove } from 'aws-amplify/storage';
+
 
 function App() {
   return (
