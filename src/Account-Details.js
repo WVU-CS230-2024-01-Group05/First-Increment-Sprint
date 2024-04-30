@@ -1,7 +1,7 @@
 import { getCurrentUser } from "aws-amplify/auth";
 
 export const useFetchUserAttributes = () => {
-    const { currentUser } = getCurrentUser();
+    const currentUser = getCurrentUser();
 
     const fetchUserAttributes = async () => {
         try {

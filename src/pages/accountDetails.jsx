@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useFetchUserAttributes } from '../Account-Details';
+import { getCurrentUser } from 'aws-amplify/auth';
 
 const AccountDetails = () => {
     const { fetchUserAttributes } = useFetchUserAttributes();
@@ -21,18 +22,14 @@ const AccountDetails = () => {
     return (
         <div className="account-details">
             <h1>Account Details</h1>
-            {userAttributes && (
-                <form>
                     <div className="form-group">
                         <label htmlFor="email">Email:</label>
-                        <input type="text" id="email" name="email" value={userAttributes.email} readOnly />
+                        <input type="text" id="email" name="email" value={getCurrentUser.email} readOnly />
                     </div>
                     <div className="form-group">
                         <label htmlFor="name">Name:</label>
-                        <input type="text" id="name" name="name" value={userAttributes.name || ''} readOnly />
+                        <input type="text" id="name" name="name" value={getCurrentUser.name || ''} readOnly />
                     </div>
-                </form>
-            )}
         </div>
     );
 };
