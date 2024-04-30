@@ -23,23 +23,26 @@ HTML: We may use simpler HTML structures and may not fully leverage the latest H
 ## Tech/framework used
 Built with:
 
-React
-React Router DOM
-AWS Amplify
-DynamoDB
-API Gateway
+React,
+React Router DOM,
+AWS Amplify,
+DynamoDB,
+API Gateway,
 
 ## Features
 By allowing users to input their available ingredients, our website can generate recipe suggestions based on what ingredients they have on hand. This feature is especially helpful for college students and anyone seeking quick, budget-friendly meal ideas. The ability to create user accounts, post recipes, and engage with others through comments and ratings adds a social and interactive element to the website. Which separates us from other recipe websites.
 
 ## Installation
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 The project was then initialized using 'amplify' and 'amplify cli' for the backend
+
 Then 'react-router-DOM' was used for navigation throughout the website
 
 ## Tests
 Smoke testing
     We did a form of smoke testing, because with AWS there is a build every time we send a commit to the repository, and in order for our change to not do anything that would cause a major issue to the website, it would have to successfully build. Because of this it helps to minimize integration risk, because we can actually see errors happening with the build, and it’ll give us a general idea of why the error is occurring. https://gyazo.com/bd1f50c5586e524dd1a773ef5fb5f845
+
 Regression testing
     For regression testing, we used SonarQube which showed us that there were issues with the security review. Selenium was used to make sure our functions were incorporated and are successful. Selenium confirmed that our account creation and login was successful, as well as our search filter, but it also showed us that our profile and post page didn’t work. https://gyazo.com/7062738e4cf4ba44349e3bd8e21e2ef1
 
