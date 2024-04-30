@@ -17,16 +17,11 @@ const Search = ({ onSearchChange }) => {
 
 
   return (
-  <div>
-    <Heading>Nom Nom Next</Heading>
     <div>
-    <div className="search-container">
-    <input type="text" placeholder="Search..." name="search"></input>
-          <nav>
-          <Link to="/Test" className="link-style">
-            <button>Search</button>
-          </Link>
-          </nav>
+      <Heading>Nom Nom Next</Heading>
+      <div>
+        <div className="search-container">
+          <input type="text" placeholder="Search..." name="search"></input>
           <select name="category">
             <option value="">All Categories</option>
             <option value="Vegan">Vegan</option>
@@ -36,21 +31,26 @@ const Search = ({ onSearchChange }) => {
             <option value="Mexican">Mexican</option>
             <option value="American">American</option>
           </select>
-      </div>
-      <View>
-      <div className="App-header">
           <nav>
-            <Link to="/Filter" className="link-style"><button className="button-post">Filter</button></Link>
-            <Link to="/post" className="link-style"><button className="button-post">Post</button></Link>
-            <Link to="/TestPost" className="link-style"><button className="button-post">TestPost</button></Link>
-            <Link to="/account" className="link-style"><button className="button-signout">Account Details</button></Link>
-            <button className="button-signout" onClick={signOut}>Sign Out</button>
+            <Link to="/Test" className="link-style">
+              <button>Search</button>
+            </Link>
           </nav>
         </div>
+        <View>
+          <div className="App-header">
+            <nav className="nav">
+              <Link to="/Filter" className="link-style"><button className="button-post">Filter</button></Link>
+              <Link to="/post" className="link-style"><button className="button-post">Post</button></Link>
+              <Link to="/TestPost" className="link-style"><button className="button-post">TestPost</button></Link>
+              <Link to="/account" className="link-style"><button className="button-signout">Account Details</button></Link>
+              <button className="button-signout" onClick={signOut}>Sign Out</button>
+            </nav>
+          </div>
         </View>
+      </div>
     </div>
-    </div>
-  )
+  );
 }
 
 export default withAuthenticator(Search);

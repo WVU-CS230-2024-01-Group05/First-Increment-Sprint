@@ -3,20 +3,25 @@
 }
 
 .App-header {
-  min-height: 100vh;
+  position: fixed; 
+  bottom: 0; 
+  width: 100%; 
+  background: #000;
+  padding: 10px 0; 
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+  z-index: 100; 
+}
+
+.nav {
   display: flex;
-  flex-direction: column;
-  font-size: calc(10px + 2vmin);
-  color: white;
   justify-content: center;
-  align-items: center; 
+  gap: 10px; 
 }
 
 body {
-  background-image: url('NOMNOM.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  margin: 0; 
+  height: 100vh; 
+  overflow: hidden;
 }
 
 .App-link {
@@ -42,27 +47,18 @@ body {
   border-color: #4CAF50;
 }
 
-.search-container button {
-  background-color: #4CAF50; 
-  color: white; 
-  border: none; 
-  padding: 10px 20px; 
-  cursor: pointer; 
-  transition: background-color 0.3s; 
+.search-container {
+  display: flex;           
+  align-items: center;    
+  gap: 10px;               
 }
 
-.search-container button:hover {
-  background-color: #45a049;
+.search-container input[type="text"], .search-container select {
+  flex-grow: 1;          
 }
 
-@media (max-width: 768px) {
-  .search-container form {
-    flex-direction: column
-  }
-  
-  .button-container {
-    padding: 5px 0; 
-  }
+.search-container nav {
+  margin-left: auto;    
 }
 
 .save-button:hover {
