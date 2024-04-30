@@ -1,5 +1,8 @@
 .filterButton{
     padding: 8px 15px;
-    border-radius: 5px;
     background-color: #228b22;
+
+}
+.filterSearchBar{
+    width: 60%;
 }
