@@ -3,7 +3,6 @@
 }
 
 .App-header {
-  background-color: #fecb9c;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -27,6 +26,7 @@ body {
 
 .button-post, .button-signout, .button-account {
   background-color: #228B22; 
+  color: white; 
   padding: 10px 20px;
   margin: 0 5px;
   border: none;
@@ -40,6 +40,19 @@ body {
 
 .form-group input:focus, .form-group textarea:focus {
   border-color: #4CAF50;
+}
+
+.search-container button {
+  background-color: #4CAF50; 
+  color: white; 
+  border: none; 
+  padding: 10px 20px; 
+  cursor: pointer; 
+  transition: background-color 0.3s; 
+}
+
+.search-container button:hover {
+  background-color: #45a049;
 }
 
 @media (max-width: 768px) {
