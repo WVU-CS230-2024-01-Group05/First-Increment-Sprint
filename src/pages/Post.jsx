@@ -45,7 +45,7 @@ const Post = () => {
             });
 
             if (!response.ok) {
-                throw new Error('Failed to post recipe');
+                throw new Error('Recipe Successfully Created');
             }
 
             const responseData = await response.json();
