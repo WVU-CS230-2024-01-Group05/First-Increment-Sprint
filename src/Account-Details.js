@@ -1,3 +1,5 @@
+import { useAuthenticator } from "@aws-amplify/ui-react";
+
 export const useFetchUserAttributes = () => {
     const { currentUser } = useAuthenticator();
 
