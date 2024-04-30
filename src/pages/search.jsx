@@ -60,7 +60,6 @@ const Search = ({ onSearchChange }) => {
                     <p>Description: {post.Description}</p>
                     <p>Ingredients: {post.Ingredients}</p>
                     <p>Directions: {post.Directions}</p>
-                    <p>Likes: {post.Likes}</p>
                     <hr />
                 </div>
             ))}
