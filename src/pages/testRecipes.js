@@ -6,7 +6,7 @@ const testRecipes = [
     directions: "Roll out dough, spread tomato sauce, add mozzarella, bake at 450°F (230°C) until crust is golden, top with fresh basil."
   },
   {
-    id: 2,
+    id: 2, 
     title: "Chicken Alfredo Pasta",
     ingredients: ["fettuccine pasta", "chicken breast", "Alfredo sauce", "garlic", "Parmesan cheese", "parsley"],
     directions: "Cook pasta, sauté chicken and garlic, mix with Alfredo sauce, top with Parmesan and parsley."
