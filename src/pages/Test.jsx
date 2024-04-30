@@ -22,21 +22,20 @@ function Posts() {
     return (
         <div className="posts-container">
             <h1>Posts from DynamoDB</h1>
-            <ul>
-                {posts.map(post => (
-                    <li key={post.PostID} className="post-item">
-                        <h3 className="post-title">{post.Title}</h3>
-                        <p className="post-content">Description: {post.Description}</p>
-                        <p className="post-content">Ingredients: {post.Ingredients}</p>
-                        <p className="post-content">Directions: {post.Directions}</p>
-                        <p className="post-content">Likes: {post.Likes}</p>
-                        <hr />
-                    </li>
-                ))}
-            </ul>
-            <Link to="/" className="link-back">Home</Link>
+            {posts.map(post => (
+                <div key={post.PostID} className="post-item">
+                    <h3>{post.Title}</h3>
+                    <p>Description: {post.Description}</p>
+                    <p>Ingredients: {post.Ingredients}</p>
+                    <p>Directions: {post.Directions}</p>
+                    <p>Likes: {post.Likes}</p>
+                    <hr />
+                </div>
+            ))}
+            <Link to="/">Home</Link>
         </div>
     );
 }
+
 
 export default Posts;
