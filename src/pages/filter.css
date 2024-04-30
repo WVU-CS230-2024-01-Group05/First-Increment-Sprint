@@ -1,6 +1,6 @@
 .filterButton{
-    display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    margin: 10px;
     padding: 8px 15px;
     background-color: #228b22;
 
