@@ -57,6 +57,7 @@ const Filter = () => {
             <li key={recipe.id}>
               <h3>{recipe.title}</h3>
               <p>Ingredients: {recipe.ingredients.join(', ')}</p>
+              <p>Directions: {recipe.directions}</p>
             </li>
           ))}
         </ul>
