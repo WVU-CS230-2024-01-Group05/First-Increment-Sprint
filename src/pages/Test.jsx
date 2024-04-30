@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import './tests.css'; // Import CSS file for component styling
 
 function Posts() {
     const [posts, setPosts] = useState([]);
@@ -19,23 +20,22 @@ function Posts() {
     }
 
     return (
-        <div>
+        <div className="posts-container">
             <h1>Posts from DynamoDB</h1>
             <ul>
                 {posts.map(post => (
-                    <li key={post.PostID}>
-                        <h3>{post.Title}</h3>
-                        <p>Description: {post.Description}</p>
-                        <p>Ingredients: {post.Ingredients}</p>
-                        <p>Directions: {post.Directions}</p>
-                        <p>Likes: {post.Likes}</p>
+                    <li key={post.PostID} className="post-item">
+                        <h3 className="post-title">{post.Title}</h3>
+                        <p className="post-content">Description: {post.Description}</p>
+                        <p className="post-content">Ingredients: {post.Ingredients}</p>
+                        <p className="post-content">Directions: {post.Directions}</p>
+                        <p className="post-content">Likes: {post.Likes}</p>
                         <hr />
                     </li>
                 ))}
             </ul>
-            <Link to="/">Home</Link>
+            <Link to="/" className="link-back">Home</Link>
         </div>
-        
     );
 }
 
