@@ -19,11 +19,6 @@ const AccountDetails = () => {
         getUserAttributes();
     }, [fetchUserAttributes]);
 
-async function currentUser(){
-    const { username, userId } = await getCurrentUser();
-    console.log(`The username: ${username}`);
-    console.log(`The userId: ${userId}`);
-}
     return (
         <div className="account-details">
             <h1>Account Details</h1>
