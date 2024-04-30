@@ -41,7 +41,7 @@ const Filter = () => {
     };
   
     return (
-      <div>
+      <div className='white-box'>
         <div>
           <input
             type="text" 
