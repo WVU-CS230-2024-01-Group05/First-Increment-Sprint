@@ -19,7 +19,7 @@ const AccountDetails = () => {
         getUserAttributes();
     }, [fetchUserAttributes]);
 
-        const { username } = getCurrentUser.username();
+        const { username } = getCurrentUser();
         console.log(`The username: ${username}`);
 
     return (
@@ -27,11 +27,11 @@ const AccountDetails = () => {
             <h1>Account Details</h1>
                     <div className="form-group">
                         <label htmlFor="email">Email:</label>
-                        <input type="text" id="email" name="email" value={userAttributes} readOnly />
+                        <input type="text" id="email" name="email" value={"nomnomnext@gmail.com"} readOnly />
                     </div>
                     <div className="form-group">
                         <label htmlFor="name">Name:</label>
-                        <input type="text" id="name" name="name" value={userAttributes} readOnly />
+                        <input type="text" id="name" name="name" value={"nomnom"} readOnly />
                     </div>
         </div>
     );
