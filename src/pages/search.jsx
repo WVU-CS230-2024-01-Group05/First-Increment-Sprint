@@ -1,40 +1,24 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../App.css';
 import { Link } from 'react-router-dom';
-import {
-  Button,
-  Flex,
-  Heading,
-  TextField,
-  View,
-  useAuthenticator,
-  withAuthenticator,
-} from "@aws-amplify/ui-react";
-
-function Posts() {
-  const [posts, setPosts] = useState([]);
-
-  useEffect(() => {
-      fetchPosts();
-  }, []);
-
-  async function fetchPosts() {
-      try {
-          const response = await fetch('https://z7pmt81mal.execute-api.us-east-2.amazonaws.com/posts');
-          const data = await response.json();
-          setPosts(data);
-      } catch (error) {
-          console.error('Error fetching data:', error);
-      }
-  }
-}
+import { Heading, View, useAuthenticator, withAuthenticator } from "@aws-amplify/ui-react";
 
 const Search = ({ onSearchChange }) => {
-
+  const [posts, setPosts] = useState([]); // State to hold posts
   const { signOut } = useAuthenticator();
 
-
-
+  useEffect(() => {
+    async function fetchPosts() {
+      try {
+        const response = await fetch('https://z7pmt81mal.execute-api.us-east-2.amazonaws.com/posts');
+        const data = await response.json();
+        setPosts(data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    }
+    fetchPosts();
+  }, []);
 
   return (
     <div>
@@ -68,7 +52,7 @@ const Search = ({ onSearchChange }) => {
           </div>
         </View>
         <div>
-          <h1>Posts from DynamoDB</h1>
+          <h1>Featured Recipes</h1>
           <ul>
             {posts && posts.map(post => (
               <li key={post.PostID}>
