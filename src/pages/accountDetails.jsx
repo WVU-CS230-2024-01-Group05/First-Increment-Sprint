@@ -32,6 +32,7 @@ const AccountDetails = () => {
                         <label htmlFor="name">Name:</label>
                         <input type="text" id="name" name="name" value={"nomnom"} readOnly />
                     </div>
+             <Link to="/">Home</Link>
         </div>
     );
 };
