@@ -2,6 +2,7 @@
   text-align: center; 
 }
 
+/* Creates a black box at bottom of screen that contains the buttons, also stayed fixed at bottom when scrolling*/
 .App-header {
   position: fixed; 
   bottom: 0; 
@@ -12,6 +13,7 @@
   z-index: 100; 
 }
 
+/* Navigation buttons with evenly spaced links */
 .nav {
   display: flex;
   justify-content: center;
@@ -24,11 +26,13 @@ body {
   overflow: auto;
 }
 
+/* Make links blue with underlines*/
 .App-link {
   color: #007bff; 
   text-decoration: underline; 
 }
 
+/* Styling the buttons with green background and white text */
 .button-post, .button-signout, .button-account {
   background-color: #228B22; 
   color: white; 
@@ -39,6 +43,7 @@ body {
   transition: background-color 0.3s;
 }
 
+/* Makes the button appear darker when hovering over*/
 .button-post:hover, .button-signout:hover, .button-account:hover {
   background-color: #006400; 
 }
@@ -47,12 +52,14 @@ body {
   border-color: #4CAF50;
 }
 
+/* Creates the search bar*/
 .search-container {
   display: flex;           
   align-items: center;    
   gap: 10px;               
 }
 
+/* Make search bar fill up space */
 .search-container input[type="text"], .search-container select {
   flex-grow: 1;          
 }

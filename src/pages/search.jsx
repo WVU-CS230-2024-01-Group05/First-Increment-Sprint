@@ -4,10 +4,12 @@ import './tests.css';
 import { Link } from 'react-router-dom';
 import { Heading, View, useAuthenticator, withAuthenticator } from "@aws-amplify/ui-react";
 
+// Used to create search bar
 const Search = () => {
   const [posts, setPosts] = useState([]); // State to hold posts
   const { signOut } = useAuthenticator();
 
+  // Used to fetch posts from our DynamoDB
   useEffect(() => {
     async function fetchPosts() {
       try {
@@ -21,6 +23,7 @@ const Search = () => {
     fetchPosts();
   }, []);
 
+  // Returns our search bar, the filter options, buttons, and featured recipes
   return (
     <div>
       <Heading>Nom Nom Next</Heading>
