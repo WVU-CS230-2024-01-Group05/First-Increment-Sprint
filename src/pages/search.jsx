@@ -60,7 +60,6 @@ const Search = () => {
             {posts.map(post => (
                 <div key={post.PostID} className="post-item">
                     <h3>{post.Title}</h3>
-                    <p>Description: {post.Description}</p>
                     <p>Ingredients: {post.Ingredients}</p>
                     <p>Directions: {post.Directions}</p>
                     <hr />
