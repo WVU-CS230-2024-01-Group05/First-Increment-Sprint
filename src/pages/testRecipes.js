@@ -1,4 +1,4 @@
-//base list of recipes that can be used for filter's search function
+//database of recipes
 const testRecipes = [
   {
     id: 1, 
