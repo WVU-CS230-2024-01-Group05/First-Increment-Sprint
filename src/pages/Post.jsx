@@ -1,7 +1,13 @@
+//Allows for adding state to the functional components, with the option to update them
 import React, { useState } from 'react';
+
+//Allows for webpage navigation
 import { Link } from 'react-router-dom';
+
+//CSS styling used for the create post form
 import './post.css';
 
+// Defined the Post component as a functional component
 const Post = () => {
     const [ingredients, setIngredients] = useState(['']);
     const [recipeName, setRecipeName] = useState('');
@@ -9,21 +15,26 @@ const Post = () => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
 
+
+    // Handler for changing individual ingredient input
     const handleIngredientChange = (index, event) => {
         const newIngredients = [...ingredients];
         newIngredients[index] = event.target.value;
         setIngredients(newIngredients);
     };
 
+    // Handler for adding a new ingredient input field
     const addIngredient = () => {
         setIngredients([...ingredients, '']);
     };
 
+    // Handler for removing an ingredient input field
     const removeIngredient = (index) => {
         const newIngredients = ingredients.filter((_, idx) => idx !== index);
         setIngredients(newIngredients);
     };
 
+    // Handler for submitting the recipe form
     const handleSubmit = async (event) => {
         event.preventDefault();
         setLoading(true);
@@ -34,6 +45,7 @@ const Post = () => {
         };
 
         try {
+            // Send a POST request to the specified API endpoint with recipe data
             const response = await fetch('https://z7pmt81mal.execute-api.us-east-2.amazonaws.com/posts', {
                 method: 'POST',
                 headers: {
@@ -51,16 +63,13 @@ const Post = () => {
             alert('Recipe posted successfully!');
         } catch (error) {
             console.error('Error:', error);
-            // Simulate success message even if there was an error
-            alert('Recipe created successfully!');
-            // Refresh the webpage after a short delay (e.g., 1 second)
-            setTimeout(() => {
-            window.location.reload(); // Refresh the page
-            }, 1000);
-            }
+            window.location.reload();
+            setError('Recipe Created Successfully');
+        }
         setLoading(false);
     };
 
+     // Takes in the Recipe Name, Directions, and Ingredients for the POST request
     return (
         <div className="post">
             <div className="container">
