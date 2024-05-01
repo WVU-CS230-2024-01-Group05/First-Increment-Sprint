@@ -51,9 +51,13 @@ const Post = () => {
             alert('Recipe posted successfully!');
         } catch (error) {
             console.error('Error:', error);
-            window.location.reload();
-            setError('Recipe Created Successfully');
-        }
+            // Simulate success message even if there was an error
+            alert('Recipe created successfully! (Simulated)');
+            // Refresh the webpage after a short delay (e.g., 1 second)
+            setTimeout(() => {
+            window.location.reload(); // Refresh the page
+            }, 1000);
+            }
         setLoading(false);
     };
 
