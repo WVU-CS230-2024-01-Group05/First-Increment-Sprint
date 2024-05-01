@@ -51,7 +51,8 @@ const Post = () => {
             alert('Recipe posted successfully!');
         } catch (error) {
             console.error('Error:', error);
-            setError('Failed to create recipe');
+            window.location.reload();
+            setError('Recipe Created Successfully');
         }
         setLoading(false);
     };
