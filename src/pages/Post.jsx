@@ -71,12 +71,6 @@ const Post = () => {
                         className="text-input"
                     />
                     <textarea
-                        value={description}
-                        onChange={(e) => setDescription(e.target.value)}
-                        placeholder="Recipe Description"
-                        className="text-area"
-                    />
-                    <textarea
                         value={directions}
                         onChange={(e) => setDirections(e.target.value)}
                         placeholder="Recipe Directions"
