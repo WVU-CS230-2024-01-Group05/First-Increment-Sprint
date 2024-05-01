@@ -21,18 +21,18 @@ const AccountDetails = () => {
     }, [fetchUserAttributes]);
 
         console.log(`The username: ${userAttributes}`);
-        
+
 //Return section to display the attributes retrieved for the user
     return (
         <div className="account-details">
             <h1>Account Details</h1>
                     <div className="form-group">
                         <label htmlFor="email">Email:</label>
-                        <input type="text" id="email" name="email" value={"nomnomnext@gmail.com"} readOnly />
+                        <input type="text" id="email" name="email" value={userAttributes.id} readOnly />
                     </div>
                     <div className="form-group">
                         <label htmlFor="name">Name:</label>
-                        <input type="text" id="name" name="name" value={"NomNom"} readOnly />
+                        <input type="text" id="name" name="name" value={userAttributes.name} readOnly />
                     </div>
              <Link to="/">Home</Link>
         </div>
