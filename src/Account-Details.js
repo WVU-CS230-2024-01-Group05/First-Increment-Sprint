@@ -1,5 +1,6 @@
 import { getCurrentUser } from "aws-amplify/auth";
 
+//Seperate function to set the account attributes for the current user for account details
 export const useFetchUserAttributes = () => {
     const currentUser = getCurrentUser();
 

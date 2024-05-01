@@ -11,7 +11,7 @@ import {
 import "./App.css";
 import "@aws-amplify/ui-react/styles.css";
 
-
+//Routes used to link the pages of the website together for button navigation
 function App() {
   return (
     <div className="App">
