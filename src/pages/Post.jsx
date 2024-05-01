@@ -5,7 +5,6 @@ import './post.css';
 const Post = () => {
     const [ingredients, setIngredients] = useState(['']);
     const [recipeName, setRecipeName] = useState('');
-    const [description, setDescription] = useState('');
     const [directions, setDirections] = useState('');
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
@@ -30,7 +29,6 @@ const Post = () => {
         setLoading(true);
         const recipeData = {
             name: recipeName,
-            description: description,
             ingredients: ingredients,
             directions: directions,
         };
