@@ -93,7 +93,7 @@ const Filter = () => {
           ))}
           </p>
         </ul>
-        link back to homepage
+        {/* link back to homepage */}
         <Link to="/">Home</Link>
       </div>
     );
