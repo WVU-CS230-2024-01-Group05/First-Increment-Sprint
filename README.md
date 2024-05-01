@@ -18,7 +18,7 @@ HTML: We may use simpler HTML structures and may not fully leverage the latest H
 
 ## Screenshots
 [Logo](https://gyazo.com/fc133cf43a531b70e55af2812054771a) 
-[Home page]()
+[Home page](https://gyazo.com/9fef3cf0ab14818513e58a821a0f9245)
 
 ## Tech/framework used
 Built with:
