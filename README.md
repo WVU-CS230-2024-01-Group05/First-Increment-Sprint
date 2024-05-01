@@ -27,7 +27,7 @@ React,
 React Router DOM,
 AWS Amplify,
 DynamoDB,
-API Gateway,
+API Gateway.
 
 ## Features
 By allowing users to input their available ingredients, our website can generate recipe suggestions based on what ingredients they have on hand. This feature is especially helpful for college students and anyone seeking quick, budget-friendly meal ideas. The ability to create user accounts, post recipes, and engage with others through comments and ratings adds a social and interactive element to the website. Which separates us from other recipe websites.
